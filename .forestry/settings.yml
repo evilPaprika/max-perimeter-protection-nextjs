@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: index.html
+  label: Главная
+  match: "**/*"
 - type: heading
   label: Заголовок
 - type: directory
