@@ -1,4 +1,19 @@
 ---
 label: header
 hide_body: true
-fields: []
+fields:
+- name: header
+  type: text
+  config:
+    required: false
+  label: header
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: logo
+- name: phone_number
+  type: text
+  config:
+    required: false
+  label: phone number
