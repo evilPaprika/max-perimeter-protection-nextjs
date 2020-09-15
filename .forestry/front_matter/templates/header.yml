@@ -17,3 +17,5 @@ fields:
   config:
     required: false
   label: phone number
+pages:
+- content/header.md
