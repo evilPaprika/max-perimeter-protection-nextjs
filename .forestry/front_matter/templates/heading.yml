@@ -2,16 +2,16 @@
 label: Heading
 hide_body: true
 fields:
-- name: nazvanie_sajta
-  type: text
-  config:
-    required: false
-  label: Название Сайта
 - name: logo
   type: file
   config:
     maxSize: 64
   label: Лого
+- name: nazvanie_sajta
+  type: text
+  config:
+    required: false
+  label: Название Сайта
 - name: telefon
   type: text
   config:
