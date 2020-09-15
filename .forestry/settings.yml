@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: _heading
+  path: sidebar/heading.json
   label: Шапка
 - type: directory
   path: ".forestry/sidebar/pages"
