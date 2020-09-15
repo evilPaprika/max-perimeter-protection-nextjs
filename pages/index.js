@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import BlogList from '../components/BlogList'
 import siteMetadata from '../content/site-metadata.md'
 
+
 const Index = props => {
   return (
     <Layout
