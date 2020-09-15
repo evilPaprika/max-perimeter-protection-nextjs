@@ -7,10 +7,8 @@ sections:
 - type: document
   path: _heading
   label: Шапка
-  match: "**/*"
-  read_only: false
 - type: directory
-  path: pages
+  path: ".forestry/sidebar/pages"
   label: Страницы
   create: all
   match: "**/*"
