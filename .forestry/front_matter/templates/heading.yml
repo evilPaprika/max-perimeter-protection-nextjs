@@ -17,3 +17,5 @@ fields:
   config:
     required: false
   label: Телефон
+pages:
+- pages/main-heading.md
