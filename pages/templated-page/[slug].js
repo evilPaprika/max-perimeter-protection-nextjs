@@ -5,7 +5,7 @@ const glob = require('glob')
 
 import Layout from '../../components/Layout'
 
-export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
+export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
   function reformatDate(fullDate) {
     const date = new Date(fullDate)
     return date.toDateString().slice(4)
@@ -21,36 +21,36 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
 
   return (
     <Layout siteTitle={siteTitle}>
-      <article className="blog">
-        <figure className="blog__hero">
+      <article className="templatedPage">
+        <figure className="templatedPage__hero">
           <img
             src={frontmatter.hero_image}
-            alt={`blog_hero_${frontmatter.title}`}
+            alt={`templatedPage_hero_${frontmatter.title}`}
           />
         </figure>
-        <div className="blog__info">
+        <div className="templatedPage__info">
           <h1>{frontmatter.title}</h1>
           <h3>{reformatDate(frontmatter.date)}</h3>
         </div>
-        <div className="blog__body">
+        <div className="templatedPage__body">
           <ReactMarkdown source={markdownBody} />
         </div>
-        <h2 className="blog__footer">Written By: {frontmatter.author}</h2>
+        <h2 className="templatedPage__footer">Written By: {frontmatter.author}</h2>
       </article>
       <style jsx>
         {`
-          .blog h1 {
+          .templatedPage h1 {
             margin-bottom: 0.7rem;
           }
 
-          .blog__hero {
+          .templatedPage__hero {
             min-height: 300px;
             height: 60vh;
             width: 100%;
             margin: 0;
             overflow: hidden;
           }
-          .blog__hero img {
+          .templatedPage__hero img {
             margin-bottom: 0;
             object-fit: cover;
             min-height: 100%;
@@ -58,20 +58,20 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             object-position: center;
           }
 
-          .blog__info {
+          .templatedPage__info {
             padding: 1.5rem 1.25rem;
             width: 100%;
             max-width: 768px;
             margin: 0 auto;
           }
-          .blog__info h1 {
+          .templatedPage__info h1 {
             margin-bottom: 0.66rem;
           }
-          .blog__info h3 {
+          .templatedPage__info h3 {
             margin-bottom: 0;
           }
 
-          .blog__body {
+          .templatedPage__body {
             width: 100%;
             padding: 0 1.25rem;
             margin: 0 auto;
@@ -79,28 +79,28 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             flex-direction: column;
             justify-content: center;
           }
-          .blog__body a {
+          .templatedPage__body a {
             padding-bottom: 1.5rem;
           }
-          .blog__body:last-child {
+          .templatedPage__body:last-child {
             margin-bottom: 0;
           }
-          .blog__body h1 h2 h3 h4 h5 h6 p {
+          .templatedPage__body h1 h2 h3 h4 h5 h6 p {
             font-weight: normal;
           }
-          .blog__body p {
+          .templatedPage__body p {
             color: inherit;
           }
-          .blog__body ul {
+          .templatedPage__body ul {
             list-style: initial;
           }
-          .blog__body ul ol {
+          .templatedPage__body ul ol {
             margin-left: 1.25rem;
             margin-bottom: 1.25rem;
             padding-left: 1.45rem;
           }
 
-          .blog__footer {
+          .templatedPage__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -109,60 +109,60 @@ export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
             max-width: 800px;
             margin: 0 auto;
           }
-          .blog__footer h2 {
+          .templatedPage__footer h2 {
             margin-bottom: 0;
           }
-          .blog__footer a {
+          .templatedPage__footer a {
             display: flex;
             justify-content: space-between;
             align-items: center;
           }
-          .blog__footer a svg {
+          .templatedPage__footer a svg {
             width: 20px;
           }
 
           @media (min-width: 768px) {
-            .blog {
+            .templatedPage {
               display: flex;
               flex-direction: column;
             }
-            .blog__body {
+            .templatedPage__body {
               max-width: 800px;
               padding: 0 2rem;
             }
-            .blog__body span {
+            .templatedPage__body span {
               width: 100%;
               margin: 1.5rem auto;
             }
-            .blog__body ul ol {
+            .templatedPage__body ul ol {
               margin-left: 1.5rem;
               margin-bottom: 1.5rem;
             }
-            .blog__hero {
+            .templatedPage__hero {
               min-height: 600px;
               height: 75vh;
             }
-            .blog__info {
+            .templatedPage__info {
               text-align: center;
               padding: 2rem 0;
             }
-            .blog__info h1 {
+            .templatedPage__info h1 {
               max-width: 500px;
               margin: 0 auto 0.66rem auto;
             }
-            .blog__footer {
+            .templatedPage__footer {
               padding: 2.25rem;
             }
           }
 
           @media (min-width: 1440px) {
-            .blog__hero {
+            .templatedPage__hero {
               height: 70vh;
             }
-            .blog__info {
+            .templatedPage__info {
               padding: 3rem 0;
             }
-            .blog__footer {
+            .templatedPage__footer {
               padding: 2rem 2rem 3rem 2rem;
             }
           }
@@ -189,10 +189,10 @@ export async function getStaticProps({ ...ctx }) {
 
 export async function getStaticPaths() {
   //get all .md files in the posts dir
-  const blogs = glob.sync('posts/**/*.md')
+  const templatedPages = glob.sync('posts/**/*.md')
 
   //remove path and extension to leave filename only
-  const blogSlugs = blogs.map(file =>
+  const templatedPageSlugs = templatedPages.map(file =>
     file
       .split('/')[1]
       .replace(/ /g, '-')
@@ -201,7 +201,7 @@ export async function getStaticPaths() {
   )
 
   // create paths with `slug` param
-  const paths = blogSlugs.map(slug => `/blog/${slug}`)
+  const paths = templatedPageSlugs.map(slug => `/templated-page/${slug}`)
   return {
     paths,
     fallback: false,

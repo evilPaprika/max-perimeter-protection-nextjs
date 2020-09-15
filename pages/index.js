@@ -1,6 +1,7 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import BlogList from '../components/BlogList'
+import siteMetadata from '../content/site-metadata.md'
 
 const Index = props => {
   return (
@@ -10,7 +11,7 @@ const Index = props => {
       siteDescription={props.description}
     >
       <section>
-        <BlogList allBlogs={props.allBlogs} />
+        <BlogList allBlogs={props.allTemplatedPages} />
       </section>
     </Layout>
   )
@@ -19,9 +20,9 @@ const Index = props => {
 export default Index
 
 export async function getStaticProps() {
-  const siteConfig = await import(`../data/config.json`)
-  //get posts & context from folder
-  const posts = (context => {
+  const siteConfig = matter(siteMetadata).data;
+
+  const templatedPages = (context => {
     const keys = context.keys()
     const values = keys.map(context)
 
@@ -46,9 +47,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allBlogs: posts,
-      title: siteConfig.default.title,
-      description: siteConfig.default.description,
+      allTemplatedPages: templatedPages,
+      title: siteConfig.title,
+      description: siteConfig.description,
     },
   }
 }

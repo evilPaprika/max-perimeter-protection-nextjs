@@ -8,7 +8,7 @@ sections:
   path: content/heading.md
   label: Шапка
 - type: directory
-  path: content/pages
+  path: content/templated-pages
   label: Страницы
   create: all
   match: "**/*"
