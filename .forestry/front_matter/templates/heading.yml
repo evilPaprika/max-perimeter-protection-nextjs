@@ -17,5 +17,3 @@ fields:
   config:
     required: false
   label: Телефон
-pages:
-- ".forestry/sidebar/pages/test.html"
