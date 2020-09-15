@@ -11,7 +11,7 @@ sections:
   label: Заголовок
 - type: directory
   path: pages
-  label: Pages
+  label: Страницы
   create: all
   match: "**/*"
 upload_dir: uploads
