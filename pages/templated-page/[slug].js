@@ -173,19 +173,21 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
 }
 
 export async function getStaticProps({ ...ctx }) {
-  const { slug } = ctx.params
-  const content = await import(`../../posts/${slug}.md`)
-  const config = await import(`../../data/config.json`)
-  const data = matter(content.default)
+  const { slug } = ctx.params;
+  const content = await import(`../../posts/${slug}.md`);
+  const config = await import(`../../content/site-metadata.md`);
+  const contentData = matter(content.default);
+  const configData = matter(config.default);
 
   return {
     props: {
-      siteTitle: config.title,
-      frontmatter: data.data,
-      markdownBody: data.content,
+      siteTitle: configData.data.title,
+      frontmatter: contentData.data,
+      markdownBody: contentData.content,
     },
   }
 }
+
 
 export async function getStaticPaths() {
   //get all .md files in the posts dir
