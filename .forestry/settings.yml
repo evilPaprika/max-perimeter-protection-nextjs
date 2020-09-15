@@ -5,14 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: index.html
+  path: build/index.html
   label: Главная
-  match: "**/*"
 - type: heading
   label: Заголовок
 - type: directory
-  path: Pages
-  label: Страницы
+  path: ''
+  label: Pages
   create: all
   match: "**/*"
 upload_dir: uploads
