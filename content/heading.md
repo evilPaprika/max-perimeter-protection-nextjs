@@ -1,6 +1,6 @@
 ---
 logo: "/uploads/logo.svg"
-nazvanie_sajta: test
-telefon: test
+site_name: test
+phone_number: test
 
 ---
