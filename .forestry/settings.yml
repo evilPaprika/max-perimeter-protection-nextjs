@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: build/index.html
-  label: Главная
 - type: heading
   label: Заголовок
 - type: directory
