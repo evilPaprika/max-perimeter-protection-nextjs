@@ -2,8 +2,10 @@ module.exports = {
   webpack: function(config) {
     config.module.rules.push({
       test: /\.md$/,
-      use: 'raw-loader',
+      loader: 'frontmatter-markdown-loader',
+      options: { mode: ['react-component'] }
     })
+
     return config
   },
 }

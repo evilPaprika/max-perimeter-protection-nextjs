@@ -12,7 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "front-matter": "^4.0.2",
+    "frontmatter-markdown-loader": "^3.6.0",
     "gray-matter": "^4.0.2",
     "next": "^9.3.3",
     "node-glob": "^1.2.0",
