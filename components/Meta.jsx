@@ -1,16 +1,18 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import React from 'react';
+
 
 export default function Meta(props) {
-    return (
-        <>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta charSet="utf-8" />
-                <title>{props.siteTitle}</title>
-                <meta name="Description" content={props.description}></meta>
-            </Head>
-            <style jsx global>
-                {`
+  return (
+      <>
+          <Head>
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta charSet="utf-8" />
+              <title>{props.siteTitle}</title>
+              <meta name="Description" content={props.description} />
+          </Head>
+          <style jsx global>
+              {`
 
                     @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
                     
@@ -28,7 +30,7 @@ export default function Meta(props) {
 
                     }
                 `}
-            </style>
-        </>
-    )
+          </style>
+      </>
+  );
 }

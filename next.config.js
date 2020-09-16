@@ -1,9 +1,9 @@
 module.exports = {
-  webpack: function(config) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',
-    })
+    });
 
     config.module.rules.push({
       test: /\.svg$/,
@@ -13,6 +13,6 @@ module.exports = {
       use: ['@svgr/webpack'],
     });
 
-    return config
+    return config;
   },
-}
+};

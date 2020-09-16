@@ -1,14 +1,17 @@
-import * as React from 'react'
-import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-const glob = require('glob')
+import matter from 'gray-matter';
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
+
+
+const glob = require('glob');
 
 export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
   function reformatDate(fullDate) {
-    const date = new Date(fullDate)
-    return date.toDateString().slice(4)
+    const date = new Date(fullDate);
+
+    return date.toDateString().slice(4);
   }
 
   /*
@@ -17,28 +20,28 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
    ** are undefined — could be a Next bug?
    */
 
-  if (!frontmatter) return <></>
+  if (!frontmatter) { return <></>; }
 
   return (
-    <Layout siteTitle={siteTitle}>
-      <article className="templatedPage">
-        <figure className="templatedPage__hero">
-          <img
-            src={frontmatter.hero_image}
-            alt={`templatedPage_hero_${frontmatter.title}`}
-          />
-        </figure>
-        <div className="templatedPage__info">
-          <h1>{frontmatter.title}</h1>
-          <h3>{reformatDate(frontmatter.date)}</h3>
-        </div>
-        <div className="templatedPage__body">
-          <ReactMarkdown source={markdownBody} />
-        </div>
-        <h2 className="templatedPage__footer">Written By: {frontmatter.author}</h2>
-      </article>
-      <style jsx>
-        {`
+      <Layout siteTitle={siteTitle}>
+          <article className="templatedPage">
+              <figure className="templatedPage__hero">
+                  <img
+                      src={frontmatter.hero_image}
+                      alt={`templatedPage_hero_${frontmatter.title}`}
+                  />
+              </figure>
+              <div className="templatedPage__info">
+                  <h1>{frontmatter.title}</h1>
+                  <h3>{reformatDate(frontmatter.date)}</h3>
+              </div>
+              <div className="templatedPage__body">
+                  <ReactMarkdown source={markdownBody} />
+              </div>
+              <h2 className="templatedPage__footer">Written By: {frontmatter.author}</h2>
+          </article>
+          <style jsx>
+              {`
           .templatedPage h1 {
             margin-bottom: 0.7rem;
           }
@@ -167,15 +170,15 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
             }
           }
         `}
-      </style>
-    </Layout>
-  )
+          </style>
+      </Layout>
+  );
 }
 
 export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
   const content = await import(`../../posts/${slug}.md`);
-  const config = await import(`../../content/site-metadata.md`);
+  const config = await import('../../content/site-metadata.md');
   const contentData = matter(content.default);
   const configData = matter(config.default);
 
@@ -185,27 +188,25 @@ export async function getStaticProps({ ...ctx }) {
       frontmatter: contentData.data,
       markdownBody: contentData.content,
     },
-  }
+  };
 }
 
-
 export async function getStaticPaths() {
-  //get all .md files in the posts dir
-  const templatedPages = glob.sync('posts/**/*.md')
+  // get all .md files in the posts dir
+  const templatedPages = glob.sync('posts/**/*.md');
 
-  //remove path and extension to leave filename only
-  const templatedPageSlugs = templatedPages.map(file =>
-    file
-      .split('/')[1]
-      .replace(/ /g, '-')
-      .slice(0, -3)
-      .trim()
-  )
+  // remove path and extension to leave filename only
+  const templatedPageSlugs = templatedPages.map((file) => file
+    .split('/')[1]
+    .replace(/ /g, '-')
+    .slice(0, -3)
+    .trim());
 
   // create paths with `slug` param
-  const paths = templatedPageSlugs.map(slug => `/templated-page/${slug}`)
+  const paths = templatedPageSlugs.map((slug) => `/templated-page/${slug}`);
+
   return {
     paths,
     fallback: false,
-  }
+  };
 }
