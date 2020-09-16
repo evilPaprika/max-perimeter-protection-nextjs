@@ -5,6 +5,10 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: content/navigation.md
+  label: Навигация
+  match: "**/*"
+- type: document
   path: content/site-metadata.md
   label: Метаданные
 - type: document
