@@ -1,31 +1,59 @@
+import matter from 'gray-matter';
 import React from 'react';
-import { Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
+import navigationContent from '../content/navigation.md';
 
 
-export default function Navigation(props) {
-  return (
-      <>
-          <Navbar bg="primary" variant="dark" expand="sm" className="mt-4 mb-5">
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="mr-auto">
-                      <Nav.Link href="#home">О компании</Nav.Link>
-                      <Nav.Link href="#link">Наши решения</Nav.Link>
-                      <NavDropdown title="Работы" id="basic-nav-dropdown">
-                          <NavDropdown.Item href="#action/3.1">Работа 1</NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.2">Работа 2</NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.3 ">Работа 3</NavDropdown.Item>
-                          <NavDropdown.Divider />
-                          <NavDropdown.Item href="#action/3.4">Работа 4</NavDropdown.Item>
-                      </NavDropdown>
-                  </Nav>
-              </Navbar.Collapse>
-          </Navbar>
-          <style jsx>
-              {`
+export default function Navigation() {
+    const { navlinks } = matter(navigationContent).data;
 
-        `}
-          </style>
-      </>
-  );
+    return (
+        <>
+            <Navbar bg="primary" variant="dark" expand="sm" className="mt-4 mb-5">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <span className="navbar__links">
+                        <Nav className="mr-auto">
+                            {navlinks.map(({ label, slug, sub_links }) => {
+                                if (!sub_links || !sub_links.length) {
+                                    return (
+                                        <Nav.Link
+                                            key={slug}
+                                            href={slug}
+                                        >
+                                            {label}
+                                        </Nav.Link>
+                                    );
+                                }
+
+                                return (
+                                    <NavDropdown title={label} id="basic-nav-dropdown">
+                                        {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
+                                            return (
+                                                <NavDropdown.Item
+                                                    key={sub_slug}
+                                                    href={sub_slug}
+                                                >
+                                                    {sub_label}
+                                                </NavDropdown.Item>
+                                            );
+                                        })}
+                                    </NavDropdown>
+                                );
+                            })}
+                        </Nav>
+                    </span>
+                </Navbar.Collapse>
+            </Navbar>
+            <style jsx>
+                {`
+                  .navbar__links {
+                      font-size: 18px;
+                      font-weight: 600;
+                  }
+                `}
+            </style>
+        </>
+    );
 }

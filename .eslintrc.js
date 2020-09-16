@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     'react/jsx-indent': ['error', 4],
     'react/jsx-indent-props': ['error', 4],
-    'comma-dangle': 'off',
+    'comma-dangle': ['error', 'always-multiline'],
     'max-len': ['error', 120],
     'no-console': 'error',
     'no-param-reassign': 'off',
@@ -29,8 +29,8 @@ module.exports = {
       'error',
       {
         multiline: true,
-        consistent: true
-      }
+        consistent: true,
+      },
     ],
     'arrow-body-style': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -51,5 +51,8 @@ module.exports = {
     'import/no-duplicates': 'error',
     'react/prop-types': 'off',
     camelcase: 'off',
+    'react/destructuring-assignment': 'off',
+    'no-multiple-empty-lines': ['error', { max: 2 }],
+    indent: ['error', 4],
   },
 };

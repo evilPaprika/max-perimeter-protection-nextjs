@@ -4,20 +4,20 @@ import ReactMarkdown from 'react-markdown';
 
 
 const BlogList = ({ allBlogs }) => {
-  function truncateSummary(content) {
-    return content.slice(0, 200).trimEnd();
-  }
+    function truncateSummary(content) {
+        return content.slice(0, 200).trimEnd();
+    }
 
-  function reformatDate(fullDate) {
-    const date = new Date(fullDate);
+    function reformatDate(fullDate) {
+        const date = new Date(fullDate);
 
-    return date.toDateString().slice(4);
-  }
+        return date.toDateString().slice(4);
+    }
 
-  return (
-      <>
-          <ul className="list">
-              {allBlogs.length > 1
+    return (
+        <>
+            <ul className="list">
+                {allBlogs.length > 1
           && allBlogs.map((post) => (
               <Link key={post.slug} href={{ pathname: `/templated-page/${post.slug}` }}>
                   <a>
@@ -41,9 +41,9 @@ const BlogList = ({ allBlogs }) => {
                   </a>
               </Link>
           ))}
-          </ul>
-          <style jsx>
-              {`
+            </ul>
+            <style jsx>
+                {`
           margin-bottom: 0;
           a:hover {
             opacity: 1;
@@ -131,9 +131,9 @@ const BlogList = ({ allBlogs }) => {
             }
           }
         `}
-          </style>
-      </>
-  );
+            </style>
+        </>
+    );
 };
 
 export default BlogList;

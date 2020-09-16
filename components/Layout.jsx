@@ -6,19 +6,19 @@ import Meta from './Meta';
 
 
 export default function Layout(props) {
-  return (
-      <Container className="mt-4">
-          <Meta
-              siteTitle={props.siteTitle}
-              siteDescription={props.siteDescription}
-          />
-          <Header siteTitle={props.siteTitle} />
-          <div className="content">{props.children}</div>
-          <style jsx>
-              {`
+    return (
+        <Container className="mt-4">
+            <Meta
+                siteTitle={props.siteTitle}
+                siteDescription={props.siteDescription}
+            />
+            <Header siteTitle={props.siteTitle} />
+            <div className="content">{props.children}</div>
+            <style jsx>
+                {`
   
         `}
-          </style>
-      </Container>
-  );
+            </style>
+        </Container>
+    );
 }

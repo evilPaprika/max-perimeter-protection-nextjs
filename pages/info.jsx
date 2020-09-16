@@ -6,17 +6,17 @@ import Layout from '../components/Layout';
 
 
 export default function Info({ frontmatter, markdownBody, siteTitle }) {
-  return (
-      <Layout
-          pathname="info"
-          bgColor={frontmatter.background_color}
-          siteTitle={siteTitle}
-      >
-          <section className="info_blurb">
-              <ReactMarkdown source={markdownBody} />
-          </section>
-          <style jsx>
-              {`
+    return (
+        <Layout
+            pathname="info"
+            bgColor={frontmatter.background_color}
+            siteTitle={siteTitle}
+        >
+            <section className="info_blurb">
+                <ReactMarkdown source={markdownBody} />
+            </section>
+            <style jsx>
+                {`
         .info_blurb {
           max-width: 800px;
           padding: 1.5rem 1.25rem;
@@ -37,22 +37,22 @@ export default function Info({ frontmatter, markdownBody, siteTitle }) {
           }
         }
       `}
-          </style>
-      </Layout>
-  );
+            </style>
+        </Layout>
+    );
 }
 
 export async function getStaticProps() {
-  const content = await import('../data/info.md');
-  const config = await import('../content/site-metadata.md');
-  const contentData = matter(content.default);
-  const configData = matter(config.default);
+    const content = await import('../data/info.md');
+    const config = await import('../content/site-metadata.md');
+    const contentData = matter(content.default);
+    const configData = matter(config.default);
 
-  return {
-    props: {
-      siteTitle: configData.data.title,
-      frontmatter: contentData.data,
-      markdownBody: contentData.content,
-    },
-  };
+    return {
+        props: {
+            siteTitle: configData.data.title,
+            frontmatter: contentData.data,
+            markdownBody: contentData.content,
+        },
+    };
 }
