@@ -12,3 +12,11 @@ fields:
   config:
     required: false
   label: Ссылка
+- name: sub_links
+  type: blocks
+  template_types:
+  - navlink
+  config:
+    min: 
+    max: 
+  label: Суб-ссылки
