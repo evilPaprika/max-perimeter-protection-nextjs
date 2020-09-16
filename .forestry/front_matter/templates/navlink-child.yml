@@ -2,3 +2,5 @@
 label: Navlink child
 hide_body: false
 fields: []
+pages:
+- content/navigation/test.md
