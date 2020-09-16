@@ -1,3 +1,5 @@
 ---
+label: home
+children: []
 
 ---
