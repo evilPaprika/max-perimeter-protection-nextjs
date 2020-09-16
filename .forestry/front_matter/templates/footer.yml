@@ -1,4 +1,21 @@
 ---
 label: Footer
 hide_body: true
-fields: []
+fields:
+- name: physical_address
+  type: text
+  config:
+    required: false
+  label: Физический адрес
+- name: phone_number
+  type: text
+  config:
+    required: false
+  label: Номер телефона
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+pages:
+- content/footer.md
