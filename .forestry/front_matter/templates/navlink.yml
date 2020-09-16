@@ -21,4 +21,5 @@ fields:
     max: 
   label: Суб-ссылки
 pages:
+- content/navigation/Наши решения.md
 - content/navigation/О компании.md
