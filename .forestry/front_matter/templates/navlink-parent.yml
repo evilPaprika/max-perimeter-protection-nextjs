@@ -7,5 +7,10 @@ fields:
   config: {}
   template: navlink-child
   label: child
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
 pages:
 - content/navigation/home.md
