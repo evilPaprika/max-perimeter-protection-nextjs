@@ -1,4 +1,14 @@
 ---
 label: Navlink
 hide_body: true
-fields: []
+fields:
+- name: label
+  type: text
+  config:
+    required: false
+  label: Лейбл
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Ссылка
