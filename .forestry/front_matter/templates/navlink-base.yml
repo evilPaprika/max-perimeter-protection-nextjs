@@ -1,4 +1,12 @@
 ---
 label: Navlink base
 hide_body: true
-fields: []
+fields:
+- name: navlinks
+  type: blocks
+  template_types:
+  - navlink
+  config:
+    min: 
+    max: 
+  label: Навигация
