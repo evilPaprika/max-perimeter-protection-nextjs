@@ -20,3 +20,5 @@ fields:
     min: 
     max: 
   label: Суб-ссылки
+pages:
+- content/navigation/О компании.md
