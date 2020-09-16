@@ -10,7 +10,8 @@ fields:
 - name: children
   type: blocks
   label: children
-  template_types: []
+  template_types:
+  - navlink-child
   config:
     min: 
     max: 
