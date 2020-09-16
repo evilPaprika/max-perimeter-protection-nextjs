@@ -22,3 +22,5 @@ fields:
     schema:
       format: markdown
   label: Описание сайта
+pages:
+- content/site-metadata.md
