@@ -1,5 +1,5 @@
 ---
-label: header
+label: Header
 hide_body: true
 fields:
 - name: header
