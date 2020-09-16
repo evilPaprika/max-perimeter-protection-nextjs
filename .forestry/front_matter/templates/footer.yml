@@ -2,3 +2,5 @@
 label: Footer
 hide_body: true
 fields: []
+pages:
+- content/footer.md
