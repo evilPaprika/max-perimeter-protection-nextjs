@@ -1,4 +1,10 @@
 ---
 label: Metadata
 hide_body: true
-fields: []
+fields:
+- name: favicon
+  type: file
+  config:
+    maxSize: 64
+  description: 16x16
+  label: Фавиконка
