@@ -4,17 +4,17 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: content/navigation
-  label: Навигация
-  create: all
-  match: "**/*"
 - type: document
   path: content/site-metadata.md
   label: Метаданные
 - type: document
   path: content/header.md
   label: Шапка
+- type: directory
+  path: content/navigation
+  label: Навигация
+  create: all
+  match: "**/*"
 - type: directory
   path: content/templated-pages
   label: Страницы
