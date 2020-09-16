@@ -13,7 +13,7 @@ navlinks:
   slug: our-work
   sub_links:
   - template: navlink
-    label: Сделаная работа в компании рога и копыта
+    label: Сделаная работа для компании рога и копыта
     slug: roga-i-kopita-work
     sub_links: []
 
