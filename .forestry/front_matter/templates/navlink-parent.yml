@@ -1,4 +1,9 @@
 ---
 label: Navlink parent
 hide_body: true
-fields: []
+fields:
+- name: child
+  type: include
+  config: {}
+  template: navlink-child
+  label: child
