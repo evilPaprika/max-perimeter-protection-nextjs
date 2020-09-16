@@ -18,6 +18,10 @@ sections:
   label: Страницы
   create: all
   match: "**/*"
+- type: document
+  path: content/footer.md
+  label: Подвал
+  match: "**/*"
 upload_dir: public/static
 public_path: "/static"
 front_matter_path: ''
