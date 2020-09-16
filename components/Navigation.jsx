@@ -48,10 +48,14 @@ export default function Navigation() {
             </Navbar>
             <style jsx>
                 {`
-                  .navbar__links {
-                      font-size: 18px;
-                      font-weight: 600;
-                  }
+                    .navbar__links {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    
+                    :root.navlink {
+                        color: #fff !important;
+                    }
                 `}
             </style>
         </>

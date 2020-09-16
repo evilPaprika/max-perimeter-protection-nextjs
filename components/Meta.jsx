@@ -13,7 +13,6 @@ export default function Meta(props) {
             </Head>
             <style jsx global>
                 {`
-
                     @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
                     
                     @font-face {
@@ -21,6 +20,10 @@ export default function Meta(props) {
                       src: url('/static/Intro-Bold-Alt.ttf');
                       font-weight: bold;
                       font-style: normal;
+                    }
+                    
+                    html, body {
+                        padding: 0; margin: 0;
                     }
 
                     h1 {

@@ -1,21 +1,18 @@
 import matter from 'gray-matter';
 import Link from 'next/link';
 import React from 'react';
-import { Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Media from 'react-bootstrap/Media';
 import Row from 'react-bootstrap/Row';
 
 import headerContent from '../content/header.md';
-import Navigation from './Navigation';
 
 
-export default function Header(props) {
-    const { logo, site_name, phone_number } = matter(headerContent).data;
+export default function Header() {
+    const { logo, phone_number } = matter(headerContent).data;
 
     return (
-        <div>
+        <header>
             <Row className="justify-content-between ">
                 <Col className="btn flex-grow-0">
                     <Link href="/">
@@ -43,7 +40,6 @@ export default function Header(props) {
                     </a>
                 </Col>
             </Row>
-            <Navigation />
             <style jsx>
                 {`
           .title__text {
@@ -59,6 +55,6 @@ export default function Header(props) {
           }
         `}
             </style>
-        </div>
+        </header>
     );
 }
