@@ -2,15 +2,17 @@
 label: Navlink parent
 hide_body: true
 fields:
-- name: child
-  type: include
-  config: {}
-  template: navlink-child
-  label: child
 - name: label
   type: text
   config:
     required: false
   label: Label
+- name: children
+  type: blocks
+  label: children
+  template_types: []
+  config:
+    min: 
+    max: 
 pages:
 - content/navigation/home.md
