@@ -5,6 +5,10 @@ navlinks:
   slug: about-company
   sub_links: []
 - template: navlink
+  label: Наши решения
+  slug: our-solutions
+  sub_links: []
+- template: navlink
   label: Работы
   slug: our-work
   sub_links:
