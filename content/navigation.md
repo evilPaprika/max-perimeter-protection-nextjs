@@ -17,8 +17,8 @@ navlinks:
     slug: planning
     sub_links: []
   - template: navlink
-    label: Еще работа
-    slug: more-work
+    label: Монтаж
+    slug: mounting
     sub_links: []
   - template: navlink
     label: И еще работа
