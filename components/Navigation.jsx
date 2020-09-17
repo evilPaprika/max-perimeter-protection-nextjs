@@ -18,12 +18,11 @@ export default function Navigation() {
                             {navlinks.map(({ label, slug, sub_links }) => {
                                 if (!sub_links || !sub_links.length) {
                                     return (
-                                        <Nav.Link
-                                            key={slug}
-                                            href={slug}
-                                        >
-                                            {label}
-                                        </Nav.Link>
+                                        <span key={slug}>
+                                            <Nav.Link href={`/templated-page/${slug}`}>
+                                                {label}
+                                            </Nav.Link>
+                                        </span>
                                     );
                                 }
 
@@ -31,12 +30,11 @@ export default function Navigation() {
                                     <NavDropdown title={label} id="basic-nav-dropdown">
                                         {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
                                             return (
-                                                <NavDropdown.Item
-                                                    key={sub_slug}
-                                                    href={sub_slug}
-                                                >
-                                                    {sub_label}
-                                                </NavDropdown.Item>
+                                                <span key={sub_slug}>
+                                                    <NavDropdown.Item href={`/templated-page/${sub_slug}`}>
+                                                        {sub_label}
+                                                    </NavDropdown.Item>
+                                                </span>
                                             );
                                         })}
                                     </NavDropdown>
