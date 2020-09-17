@@ -22,7 +22,11 @@ export default function Footer() {
                         </Col>
                         <Col className="">
                             Телефон
-                            <div className="lead">{phone_number}</div>
+                            <div>
+                                <a className="lead text-white" href={`tel:${phone_number}`}>
+                                    {phone_number}
+                                </a>
+                            </div>
                         </Col>
                         <Col className="">
                             E-Mail

@@ -17,7 +17,8 @@ const Index = ({ siteTitle, description }) => {
                 et pretium urna. Donec venenatis augue vel purus convallis elementum. Quisque luctus euismod
                 quam volutpat tempor. Mauris consectetur iaculis ornare. Praesent placerat tincidunt tellus,
                 sit amet vulputate lorem ornare in. Suspendisse et orci imperdiet, varius mauris eget, sagittis leo.
-                Duis sit amet facilisis elit. Vestibulum aliquet tincidunt dignissim. Aenean convallis lobortis condimentum.
+                Duis sit amet facilisis elit. Vestibulum aliquet
+                tincidunt dignissim. Aenean convallis lobortis condimentum.
 
                 Quisque sit amet lorem ultricies, tincidunt ipsum et, pellentesque lectus. Suspendisse volutpat
                 ut mi at vulputate. In turpis neque, mattis et tincidunt id,
@@ -28,7 +29,8 @@ const Index = ({ siteTitle, description }) => {
                 Quisque pellentesque ut erat ut suscipit. Maecenas aliquam, nisi
                 sed condimentum dictum, arcu turpis dictum velit, quis malesuada purus nisl et neque.
                 Proin ac arcu ac elit sollicitudin tincidunt et quis urna. Quisque finibus augue convallis
-                hendrerit sodales. Quisque dapibus tellus at nibh lacinia tempus. Ut euismod, felis viverra rutrum rhoncus,
+                hendrerit sodales. Quisque dapibus tellus at nibh lacinia
+                tempus. Ut euismod, felis viverra rutrum rhoncus,
                 tellus erat auctor eros, ac maximus mauris ante sit amet nulla. Sed rhoncus mollis
                 fringilla. Etiam eu lorem eget leo imperdiet faucibus a hendrerit felis.
 
@@ -50,34 +52,8 @@ export default Index;
 export async function getStaticProps() {
     const siteConfig = matter(siteMetadata).data;
 
-    const templatedPages = ((context) => {
-        const keys = context.keys();
-        const values = keys.map(context);
-
-        const data = keys.map((key, index) => {
-            // Create slug from filename
-            const slug = key
-                .replace(/^.*[\\\/]/, '')
-                .split('.')
-                .slice(0, -1)
-                .join('.');
-            const value = values[index];
-            // Parse yaml metadata & markdownbody in document
-            const document = matter(value.default);
-
-            return {
-                frontmatter: document.data,
-                markdownBody: document.content,
-                slug,
-            };
-        });
-
-        return data;
-    })(require.context('../posts', true, /\.md$/));
-
     return {
         props: {
-            allTemplatedPages: templatedPages,
             siteTitle: siteConfig.title,
             description: siteConfig.description,
         },
