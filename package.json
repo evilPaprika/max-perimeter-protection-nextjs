@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "eslint": "eslint . --fix --ext .jsx",
-    "static-watcher": "watch -p \"components/**/*\" -p \"pages/**/*\" -p \"content/**/*\" -p \".forestry/**/*\" -p \"public/**/*\"  -c \"next build && next export\""
+    "static-watcher": "watch -p \"components/**/*\" -p \"pages/**/*\" -p \"content/**/*\" -p \".forestry/**/*\" -p \"public/**/*\"  -c \"next build && next export\" &"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
