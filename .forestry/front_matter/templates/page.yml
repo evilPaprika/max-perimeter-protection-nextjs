@@ -11,5 +11,3 @@ fields:
     schema:
       format: markdown
   label: markdown
-pages:
-- content/templated-pages/test 1.md
