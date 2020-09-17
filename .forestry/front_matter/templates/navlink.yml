@@ -21,11 +21,3 @@ fields:
     min: 
     max: 
   label: Суб-ссылки
-- name: page
-  type: blocks
-  label: Страница
-  template_types:
-  - page
-  config:
-    min: 
-    max: 1
