@@ -18,7 +18,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Еще работа
-    slug: more-works
+    slug: more-work
     sub_links: []
   - template: navlink
     label: И еще работа
