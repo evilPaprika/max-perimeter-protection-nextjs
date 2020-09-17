@@ -10,7 +10,7 @@ navlinks:
   sub_links: []
 - template: navlink
   label: Работы
-  slug: our-work
+  slug: ''
   sub_links:
   - template: navlink
     label: Сделаная работа для компании рога и копыта
