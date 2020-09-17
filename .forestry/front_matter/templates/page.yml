@@ -2,3 +2,5 @@
 label: Page
 hide_body: false
 fields: []
+pages:
+- content/templated-pages/about-company.md
