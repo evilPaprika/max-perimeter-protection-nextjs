@@ -21,8 +21,8 @@ navlinks:
     slug: mounting
     sub_links: []
   - template: navlink
-    label: И еще работа
-    slug: even-more-work
+    label: Пусконаладка
+    slug: сommissioning
     sub_links: []
 
 ---
