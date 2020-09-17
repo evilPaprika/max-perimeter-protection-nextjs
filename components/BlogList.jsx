@@ -61,7 +61,6 @@ const BlogList = ({ allBlogs }) => {
           .hero_image {
             width: 100%;
             height: 33vh;
-            overflow: hidden;
             background-color: #000;
           }
           .hero_image img {

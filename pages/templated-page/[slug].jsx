@@ -52,7 +52,6 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
             height: 60vh;
             width: 100%;
             margin: 0;
-            overflow: hidden;
           }
           .templatedPage__hero img {
             margin-bottom: 0;
