@@ -5,9 +5,6 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: content/landing-page.md
-  label: Лендинг
-- type: document
   path: content/site-metadata.md
   label: Метаданные
 - type: document
@@ -16,6 +13,9 @@ sections:
 - type: document
   path: content/navigation.md
   label: Навигация
+- type: document
+  path: content/landing-page.md
+  label: Лендинг
 - type: directory
   path: content/templated-pages
   label: Страницы
