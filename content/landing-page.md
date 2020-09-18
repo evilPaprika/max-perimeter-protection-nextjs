@@ -24,8 +24,8 @@ cards:
   picture: "/static/pic-01.jpg"
   title: Техническое обслуживание
 - template: card
-  title: title
-  caption: test
+  title: Четвертая карточка
+  caption: Нужно потестить с несколькими строками
   picture: "/static/johannes-andersson-joshua-tree.jpg"
   link_slug: ''
 
