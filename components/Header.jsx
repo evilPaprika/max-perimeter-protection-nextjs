@@ -43,11 +43,11 @@ export default function Header() {
             <style jsx>
                 {`
                     .title__text {
-                        margin: 8px 0 0 0;
+                        margin: 10px 0 0 0;
                         font-size: 30px;
                     }
                     .title__text_first_word {
-                        font-size: 43px;
+                        font-size: 37px;
                     }
                     .phoneNumber {
                         margin-top: 40px;
@@ -55,11 +55,11 @@ export default function Header() {
                     }
                     @media (max-width: 576px) {
                         .title__text {
-                            margin: 18px 0 0 0;
+                            margin: 23px 0 0 0;
                             font-size: 20px;
                         }
                         .title__text_first_word {
-                            font-size: 29px;
+                            font-size: 25px;
                         }
                         .phoneNumber {
                             margin-top: 10px;
