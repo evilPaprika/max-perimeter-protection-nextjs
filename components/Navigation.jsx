@@ -51,10 +51,6 @@ export default function Navigation() {
                         font-weight: 600;
                         white-space: nowrap;
                     }
-                    
-                    .navbar__dropdownItem:hover {
-                        background-color: #fecf00;
-                    }
                 `}
             </style>
         </>
