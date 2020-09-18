@@ -22,7 +22,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Пусконаладка
-    slug: сommissioning
+    slug: commissioning
     sub_links: []
 
 ---
