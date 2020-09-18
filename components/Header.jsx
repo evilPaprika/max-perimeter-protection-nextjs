@@ -25,8 +25,8 @@ export default function Header() {
                             />
                             <Media.Body>
                                 <h1 className="title__text text-left ml-3 text-primary">
-                                    <div className="title__text_first_word">Максимальная</div>
-                                    Защита Периметра
+                                    <div className="title__text_first_word">МАКСИМАЛЬНАЯ</div>
+                                    ЗАЩИТА ПЕРИМЕТРА
                                 </h1>
                             </Media.Body>
                         </Media>
