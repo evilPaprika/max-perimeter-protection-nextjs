@@ -14,7 +14,7 @@ export default function Cards() {
             <CardGroup
                 style={{
                     display: 'flex',
-                    'flex-flow': 'row wrap',
+                    flexFlow: 'row wrap',
                 }}
                 className="justify-content-around"
             >
@@ -23,10 +23,10 @@ export default function Cards() {
                         <Card
                             key={link_slug}
                             border="primary"
-                            className="rounded shadow mb-4 border-left"
+                            className="rounded shadow-sm mb-4 border-left cardBase"
                             style={{ width: '18rem', flex: 'initial' }}
                         >
-                            <a href={`/templated-page/${link_slug}`}>
+                            <a href={`/templated-page/${link_slug}`} className="h-100">
                                 <Card.Img className="cardImage" variant="top" src={picture} />
                                 <Card.Body>
                                     <Card.Title>{title}</Card.Title>
@@ -44,6 +44,9 @@ export default function Cards() {
             </CardGroup>
             <style global jsx>
                 {`
+                    .cardBase:hover {
+                        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+                    }
                     .cardImage {
                         width: 100%;
                         height: 12rem;
