@@ -1,6 +1,13 @@
 ---
 label: Landing Page
 hide_body: false
-fields: []
+fields:
+- name: hero-carousel
+  type: blocks
+  template_types: []
+  config:
+    min: 
+    max: 1
+  label: Галерея карусель
 pages:
 - content/landing-page.md
