@@ -1,10 +1,6 @@
 import matter from 'gray-matter';
-import Link from 'next/link';
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Col from 'react-bootstrap/Col';
-import Media from 'react-bootstrap/Media';
-import Row from 'react-bootstrap/Row';
 
 import landingPageContent from '../content/landing-page.md';
 
