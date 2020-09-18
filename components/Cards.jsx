@@ -11,7 +11,13 @@ export default function Cards() {
 
     return (
         <section className="mt-5">
-            <CardGroup className="justify-content-around">
+            <CardGroup
+                style={{
+                    display: 'flex',
+                    'flex-flow': 'row wrap',
+                }}
+                className="justify-content-around"
+            >
                 {cards.map(({ picture, title, caption, link_slug }) => {
                     return (
                         <Card
