@@ -1,7 +1,7 @@
 ---
 hero-carousel:
 - template: hero-carousel
-  picture: "/static/kust-rn1.JPG"
+  picture: "/static/dns-rn2.JPG"
   caption: Подпись под картинкой (можно без нее)
 - template: hero-carousel
   picture: "/static/04_sensitive_1440x810_4.jpg"
