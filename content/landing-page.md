@@ -19,6 +19,11 @@ Cards:
   caption: Техническое обслуживание
   link_slug: tech-support
   picture: "/static/pic-01.jpg"
+cards:
+- template: card
+  caption: '1'
+  link_slug: '1'
+  picture: ''
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
