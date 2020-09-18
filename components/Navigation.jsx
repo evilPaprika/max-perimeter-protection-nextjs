@@ -28,7 +28,11 @@ export default function Navigation() {
                                     <NavDropdown key={label} title={label} id="basic-nav-dropdown">
                                         {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
                                             return (
-                                                <NavDropdown.Item key={sub_slug} href={`/templated-page/${sub_slug}`}>
+                                                <NavDropdown.Item
+                                                    className="navbar__dropdownItem"
+                                                    key={sub_slug}
+                                                    href={`/templated-page/${sub_slug}`}
+                                                >
                                                     {sub_label}
                                                 </NavDropdown.Item>
                                             );
@@ -40,7 +44,7 @@ export default function Navigation() {
                     </span>
                 </Navbar.Collapse>
             </Navbar>
-            <style jsx>
+            <style global jsx>
                 {`
                     .navbar__links {
                         font-size: 18px;
@@ -48,8 +52,8 @@ export default function Navigation() {
                         white-space: nowrap;
                     }
                     
-                    :root.navlink {
-                        color: #fff !important;
+                    .navbar__dropdownItem:hover {
+                        background-color: #faf79b;
                     }
                 `}
             </style>
