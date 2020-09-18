@@ -23,6 +23,11 @@ cards:
   link_slug: tech-support
   picture: "/static/pic-01.jpg"
   title: Техническое обслуживание
+- template: card
+  title: title
+  caption: test
+  picture: "/static/johannes-andersson-joshua-tree.jpg"
+  link_slug: ''
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
