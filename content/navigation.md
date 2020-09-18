@@ -24,5 +24,9 @@ navlinks:
     label: Пусконаладка
     slug: commissioning
     sub_links: []
+- template: navlink
+  label: Информация
+  slug: ''
+  sub_links: []
 
 ---
