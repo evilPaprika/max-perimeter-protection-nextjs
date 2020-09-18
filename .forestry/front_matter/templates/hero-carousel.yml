@@ -2,7 +2,13 @@
 label: Hero carousel slide
 hide_body: true
 fields:
-- name: pictures
-  type: image_gallery
-  config: {}
-  label: Картинки
+- name: picture
+  type: file
+  config:
+    maxSize: 64
+  label: Картинка
+- name: caption
+  type: text
+  config:
+    required: false
+  label: Подпись
