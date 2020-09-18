@@ -10,5 +10,13 @@ fields:
     min: 
     max: 
   label: Галерея карусель
+- name: Cards
+  type: blocks
+  template_types:
+  - ard
+  config:
+    min: 
+    max: 
+  label: Карточки
 pages:
 - content/landing-page.md
