@@ -28,5 +28,9 @@ navlinks:
   label: Информация
   slug: ''
   sub_links: []
+- template: navlink
+  label: днс
+  slug: ''
+  sub_links: []
 
 ---
