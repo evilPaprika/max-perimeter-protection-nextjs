@@ -1,6 +1,7 @@
 ---
 label: Card
 hide_body: true
+display_field: title
 fields:
 - name: picture
   type: file
