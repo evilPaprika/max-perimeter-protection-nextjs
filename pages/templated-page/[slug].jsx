@@ -13,10 +13,8 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
 
     return (
         <Layout siteTitle={siteTitle}>
-            <article>
-                <div>
-                    <ReactMarkdown source={markdownBody} escapeHtml={false} />
-                </div>
+            <article className="auto">
+                <ReactMarkdown source={markdownBody} escapeHtml={false} />
             </article>
             <style jsx>
                 {`

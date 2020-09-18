@@ -26,12 +26,6 @@ export default function Meta(props) {
                         padding: 0; margin: 0;
                         position: relative
                     }
-
-                    h1 {
-                        font-family: IntroBold, sans-serif;
-                        font-weight: bold;
-                        font-style:normal;
-                    }
                 `}
             </style>
         </>

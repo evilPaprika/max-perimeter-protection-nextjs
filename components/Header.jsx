@@ -42,18 +42,23 @@ export default function Header() {
             </Row>
             <style jsx>
                 {`
-          .title__text {
-            margin: 8px 0 0 0;
-            font-size: 30px;
-          }
-          .title__text_first_word {
-            font-size: 43px;
-          }
-          .phoneNumber {
-            margin-top: 40px;
-            min-width: 300px;
-          }
-        `}
+                    .title__text {
+                        margin: 8px 0 0 0;
+                        font-size: 30px;
+                    }
+                    .title__text_first_word {
+                        font-size: 43px;
+                    }
+                    .phoneNumber {
+                        margin-top: 40px;
+                        min-width: 300px;
+                    }
+                    h1 {
+                        font-family: IntroBold, sans-serif;
+                        font-weight: bold;
+                        font-style:normal;
+                    }
+                `}
             </style>
         </header>
     );
