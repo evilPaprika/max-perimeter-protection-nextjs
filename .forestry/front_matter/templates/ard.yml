@@ -1,4 +1,14 @@
 ---
 label: Сard
 hide_body: true
-fields: []
+fields:
+- name: picture
+  type: file
+  config:
+    maxSize: 64
+  label: Картинка
+- name: caption
+  type: text
+  config:
+    required: false
+  label: Подпись
