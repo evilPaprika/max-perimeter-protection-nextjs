@@ -53,7 +53,7 @@ export default function Navigation() {
                     }
                     
                     .navbar__dropdownItem:hover {
-                        background-color: #faf79b;
+                        background-color: #fecf00;
                     }
                 `}
             </style>

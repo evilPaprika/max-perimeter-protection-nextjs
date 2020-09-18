@@ -53,10 +53,6 @@ export default function Header() {
                         margin-top: 40px;
                         min-width: 300px;
                     }
-                    .phoneNumber:hover {
-                          text-shadow: 4px 2px 0 #faf79b, 0 0 5em #faf79b;
-                          color: #4B5B6F;
-                    }
                     @media (max-width: 576px) {
                         .title__text {
                             margin: 23px 0 0 0;
