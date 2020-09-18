@@ -12,3 +12,8 @@ fields:
   config:
     required: false
   label: Подпись
+- name: link_slug
+  type: text
+  config:
+    required: false
+  label: Ссылка
