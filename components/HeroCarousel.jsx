@@ -15,7 +15,7 @@ export default function HeroCarousel() {
                     return (
                         <Carousel.Item key={picture}>
                             <img
-                                className="d-block w-100"
+                                className="d-block carouselImage w-100"
                                 src={picture}
                                 alt={caption}
                             />
@@ -28,7 +28,11 @@ export default function HeroCarousel() {
             </Carousel>
             <style jsx>
                 {`
-
+                    .carouselImage {
+                        min-height: 300px;
+                        height: calc((50vh + 40vw) / 2);
+                        object-fit: cover;
+                    }
                 `}
             </style>
         </div>
