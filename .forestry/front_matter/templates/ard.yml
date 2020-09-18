@@ -1,6 +1,7 @@
 ---
 label: Сard
 hide_body: true
+display_field: caption
 fields:
 - name: picture
   type: file
