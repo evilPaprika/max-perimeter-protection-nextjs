@@ -46,7 +46,7 @@ export default function Cards() {
                 {`
                     .cardImage {
                         width: 100%;
-                        height: 15vw;
+                        height: 12rem;
                         object-fit: cover;
                     }
                     .cardImage__last {
