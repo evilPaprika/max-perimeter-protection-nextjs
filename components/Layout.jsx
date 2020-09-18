@@ -10,14 +10,14 @@ import Navigation from './Navigation';
 
 
 export default function Layout(props) {
-    const { siteTitle, siteDescription } = matter(siteMetadataContent).data;
+    const {title, description} = matter(siteMetadataContent).data;
 
     return (
         <>
             <Container className="mt-4">
                 <Meta
-                    siteTitle={siteTitle}
-                    siteDescription={siteDescription}
+                    siteTitle={title}
+                    siteDescription={description}
                 />
                 <Header />
                 <Navigation />
