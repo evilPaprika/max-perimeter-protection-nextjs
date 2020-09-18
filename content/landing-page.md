@@ -9,6 +9,9 @@ hero-carousel:
 - template: hero-carousel
   picture: "/static/dks-lk6.JPG"
   caption: ''
+- template: hero-carousel
+  picture: "/static/kust-rn1.JPG"
+  caption: ''
 cards:
 - template: card
   caption: тут какой-то текст еще, вот
