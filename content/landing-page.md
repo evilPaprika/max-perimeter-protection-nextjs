@@ -27,7 +27,7 @@ cards:
   title: Четвертая карточка
   caption: Нужно потестить переход на вторую строку
   picture: "/static/johannes-andersson-joshua-tree.jpg"
-  link_slug: ''
+  link_slug: empty
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
