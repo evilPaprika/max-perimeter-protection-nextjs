@@ -25,7 +25,7 @@ cards:
   title: Техническое обслуживание
 - template: card
   title: Четвертая карточка
-  caption: Нужно потестить с несколькими строками
+  caption: Нужно потестить переход на вторую строку
   picture: "/static/johannes-andersson-joshua-tree.jpg"
   link_slug: ''
 
