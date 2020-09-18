@@ -19,10 +19,10 @@ cards:
   link_slug: commissioning
   title: Пусконаладка
 - template: card
-  caption: Техническое обслуживание
+  caption: ''
   link_slug: tech-support
   picture: "/static/pic-01.jpg"
-  title: ''
+  title: Техническое обслуживание
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
