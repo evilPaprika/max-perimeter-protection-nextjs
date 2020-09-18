@@ -7,7 +7,7 @@ hero-carousel:
   picture: "/static/04_sensitive_1440x810_4.jpg"
   caption: ''
 - template: hero-carousel
-  picture: "/static/2-1.jpg"
+  picture: "/static/2.jpg"
   caption: ''
 cards:
 - template: card
