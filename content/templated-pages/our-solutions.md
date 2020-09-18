@@ -2,6 +2,8 @@
 markdown: ''
 
 ---
-    fsgsdfasf
+страница наши решения
 
-![](/static/mahkeo-monkey.jpg)![](/static/norris-niman-iceland.jpg)
+![](/static/norris-niman-iceland.jpg)
+
+![](/static/mahkeo-monkey.jpg)
