@@ -4,15 +4,11 @@ hide_body: false
 fields:
 - name: hero-carousel
   type: blocks
-  template_types: []
+  template_types:
+  - hero-carousel
   config:
     min: 
-    max: 1
+    max: 
   label: Галерея карусель
-- name: karusel
-  type: include
-  config: {}
-  template: hero-carousel
-  label: Карусель
 pages:
 - content/landing-page.md
