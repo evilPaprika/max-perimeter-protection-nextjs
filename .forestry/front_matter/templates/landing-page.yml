@@ -9,5 +9,10 @@ fields:
     min: 
     max: 1
   label: Галерея карусель
+- name: karusel
+  type: include
+  config: {}
+  template: hero-carousel
+  label: Карусель
 pages:
 - content/landing-page.md
