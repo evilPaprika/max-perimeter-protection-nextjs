@@ -2,3 +2,5 @@
 label: Landing Page
 hide_body: false
 fields: []
+pages:
+- content/landing-page.md
