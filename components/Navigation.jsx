@@ -10,7 +10,7 @@ export default function Navigation() {
 
     return (
         <>
-            <Navbar bg="primary" variant="dark" expand="sm" className="mt-4 mb-5">
+            <Navbar bg="primary" variant="dark" expand="sm" className="mt-4 mb-3">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <span className="navbar__links">
@@ -18,23 +18,19 @@ export default function Navigation() {
                             {navlinks.map(({ label, slug, sub_links }) => {
                                 if (!sub_links || !sub_links.length) {
                                     return (
-                                        <span key={slug}>
-                                            <Nav.Link href={`/templated-page/${slug}`}>
-                                                {label}
-                                            </Nav.Link>
-                                        </span>
+                                        <Nav.Link key={slug} href={`/templated-page/${slug}`}>
+                                            {label}
+                                        </Nav.Link>
                                     );
                                 }
 
                                 return (
-                                    <NavDropdown title={label} id="basic-nav-dropdown">
+                                    <NavDropdown key={label} title={label} id="basic-nav-dropdown">
                                         {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
                                             return (
-                                                <span key={sub_slug}>
-                                                    <NavDropdown.Item href={`/templated-page/${sub_slug}`}>
-                                                        {sub_label}
-                                                    </NavDropdown.Item>
-                                                </span>
+                                                <NavDropdown.Item key={sub_slug} href={`/templated-page/${sub_slug}`}>
+                                                    {sub_label}
+                                                </NavDropdown.Item>
                                             );
                                         })}
                                     </NavDropdown>

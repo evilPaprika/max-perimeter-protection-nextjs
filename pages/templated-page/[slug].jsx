@@ -1,8 +1,8 @@
 import matter from 'gray-matter';
 import React from 'react';
-import ReactMarkdown from 'react-markdown/with-html';
 
 import Layout from '../../components/Layout';
+import MarkdownContent from '../../components/MarkdownContent';
 
 
 const glob = require('glob');
@@ -13,14 +13,7 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
 
     return (
         <Layout siteTitle={siteTitle}>
-            <article className="auto">
-                <ReactMarkdown source={markdownBody} escapeHtml={false} />
-            </article>
-            <style jsx>
-                {`
-                  
-                `}
-            </style>
+            <MarkdownContent markdownBody={markdownBody} />
         </Layout>
     );
 }
