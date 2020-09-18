@@ -10,7 +10,7 @@ import Navigation from './Navigation';
 
 
 export default function Layout(props) {
-    const {title, description} = matter(siteMetadataContent).data;
+    const { title, description } = matter(siteMetadataContent).data;
 
     return (
         <>
