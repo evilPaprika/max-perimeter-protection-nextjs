@@ -28,9 +28,9 @@ export default function Footer() {
                                 </a>
                             </div>
                         </Col>
-                        <Col className="">
+                        <Col>
                             E-Mail
-                            <div className="lead">{email}</div>
+                            <a href={`mailto:${email}`} className="lead d-block text-white">{email}</a>
                         </Col>
                     </Row>
                 </Container>
