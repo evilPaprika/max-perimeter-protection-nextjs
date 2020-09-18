@@ -53,6 +53,24 @@ export default function Header() {
                         margin-top: 40px;
                         min-width: 300px;
                     }
+                    @media (max-width: 576px) {
+                        .title__text {
+                            margin: 18px 0 0 0;
+                            font-size: 20px;
+                        }
+                        .title__text_first_word {
+                            font-size: 29px;
+                        }
+                        .phoneNumber {
+                            margin-top: 10px;
+                            min-width: 300px;
+                            font-size: 26px;
+                        }
+                        .phoneNumber h1 {
+                            margin-top: 10px;
+                        }
+                    }
+
                     h1 {
                         font-family: IntroBold, sans-serif;
                         font-weight: bold;
