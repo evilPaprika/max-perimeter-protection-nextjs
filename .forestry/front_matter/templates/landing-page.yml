@@ -10,7 +10,7 @@ fields:
     min: 
     max: 
   label: Галерея карусель
-- name: Cards
+- name: cards
   type: blocks
   template_types:
   - ard
