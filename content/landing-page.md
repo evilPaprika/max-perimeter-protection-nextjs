@@ -6,6 +6,7 @@ hero-carousel:
 - template: hero-carousel
   picture: "/static/04_sensitive_1440x810_4.jpg"
   caption: ''
+Cards: []
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
