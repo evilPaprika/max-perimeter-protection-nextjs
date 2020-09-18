@@ -8,17 +8,21 @@ hero-carousel:
   caption: ''
 cards:
 - template: card
-  caption: Монтаж
+  caption: тут какой-то текст еще, вот
   link_slug: mounting
   picture: "/static/installation-power.jpg"
+  title: Монтаж
 - template: card
-  caption: Пусконаладка
+  caption: тут текст подлиннее текст текст текст текст текст текст текст текст текст
+    текст текст текст текст
   picture: "/static/f0124636-service_man_connecting_cable_for_home_tv.jpg"
   link_slug: commissioning
+  title: Пусконаладка
 - template: card
   caption: Техническое обслуживание
   link_slug: tech-support
   picture: "/static/pic-01.jpg"
+  title: ''
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
