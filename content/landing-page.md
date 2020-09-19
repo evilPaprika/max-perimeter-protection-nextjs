@@ -16,7 +16,7 @@ hero-carousel:
   picture: "/static/dns-rn1.JPG"
   caption: ''
 - template: hero-carousel
-  picture: "/static/4.jpg"
+  picture: ''
   caption: ''
 cards:
 - template: card
