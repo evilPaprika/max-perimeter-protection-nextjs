@@ -9,7 +9,7 @@ import footerContent from '../content/footer.md';
 
 
 export default function Footer() {
-    const { physical_address, phone_number, email } = matter(footerContent).data;
+    const { physical_address, phone_number, email, telegram_username } = matter(footerContent).data;
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function Footer() {
             <footer className="footer mb-5">
                 <Container>
                     <Row>
-                        <Col className="justify-content-between text-light d-md-flex align-items-center d-none">
+                        <Col className="footer__column justify-content-between text-light d-lg-flex align-items-center d-none">
                             <img
                                 width={100}
                                 height={100}
@@ -31,58 +31,79 @@ export default function Footer() {
                                 </h1>
                             </Media.Body>
                         </Col>
-                        <Col className="justify-content-between text-light mt-1">
-                            <Row className="info_row">
-                                <span className="info__label">Адрес: </span>
-                                <span className="info__data">{physical_address}</span>
-                            </Row>
-                            <Row className="info_row">
-                                <span className="info__label">Телефон: </span>
-                                <a className="info__data" href={`tel:${phone_number}`}>
-                                    {phone_number}
-                                </a>
-                            </Row>
-                            <Row className="info_row">
-                                <span className="info__label">E-Mail: </span>
-                                <a
-                                    href={`mailto:${email}`}
-                                    className="info__data"
-                                    rel="noreferrer"
-                                    target="_blank"
-                                >{email}
-                                </a>
-                            </Row>
+                        <Col className="footer__column">
+                            <span className="info__label">Адрес </span>
+                            <span className="info__data">{physical_address}</span>
+                        </Col>
+                        <Col className="footer__column">
+                            <span className="info__label">Телефон </span>
+                            <a className="info__data" href={`tel:${phone_number}`}>
+                                {phone_number}
+                            </a>
+                        </Col>
+                        <Col className="footer__column">
+                            <span className="info__label">E-Mail </span>
+                            <a
+                                href={`mailto:${email}`}
+                                className="info__data"
+                                rel="noreferrer"
+                                target="_blank"
+                            >{email}
+                            </a>
+                        </Col>
+                        <Col className="footer__column">
+                            <span className="info__label">Telegram </span>
+                            <a
+                                href={`https://t.me/${telegram_username}`}
+                                className="info__data"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
+                                <img
+                                    width={25}
+                                    height={25}
+                                    src="/static/telegram.svg"
+                                    alt="site logo"
+                                />
+                            </a>
                         </Col>
                     </Row>
                 </Container>
             </footer>
             <style jsx>
                 {`
-                    @media (max-width: 576px) {
-                        :global(.footer__logo) {
-                            display: none;
-                        }
-                    }
-
-                    .footer__title {
-                        font-size: 25px;
-                    }
-                    .footer__title_first_word {
-                        font-size: 30px;
-                    }
-                    :global(.info_row) {
-                        align-items: baseline;
-                        flex-wrap: nowrap;
-                    }
                     .info__label {
-                      margin-left: 10px;
                       font-size: 18px;
                       font-weight: bold;
                       margin-right: 5px;
+                      color: #fff;
                     }
                     .info__data {
+                        display: block;
                         color: #fff;
                         font-size: 16px;
+                    }
+                    @media (max-width: 776px) {
+                        :global(.footer__column) {
+                            flex-basis: 50%;
+                        }
+                    }
+                    @media (max-width: 576px) {
+                        :global(.footer__column) {
+                            flex-basis: 50%;
+                        }
+                        .info__label {
+                            font-size: 14px;
+                        }
+                        .info__data {
+                            font-size: 12px;
+                        }
+                    }
+                    .footer__title {
+                        font-size: 24px;
+                    }
+                    .footer__title_first_word {
+                        font-size: 29px;
                     }
                     .footer {
                         position: absolute;
