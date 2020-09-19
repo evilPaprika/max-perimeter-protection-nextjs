@@ -31,7 +31,7 @@ export default function Footer() {
                                 </h1>
                             </Media.Body>
                         </Col>
-                        <Col className="justify-content-between text-light">
+                        <Col className="justify-content-between text-light mt-1">
                             <Row className="info_row">
                                 <span className="info__label">Адрес: </span>
                                 <span className="info__data">{physical_address}</span>
