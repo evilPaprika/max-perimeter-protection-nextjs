@@ -15,29 +15,50 @@ export default function Footer() {
             <div className="backgroundImage" />
             <footer className="footer mb-5">
                 <Container>
-                    <Row className="justify-content-between text-light h4">
-                        <Col className="">
-                            Адрес
-                            <div className="lead">{physical_address}</div>
+                    <Row>
+                        <Col className="justify-content-between text-light">
+                            <img
+                                width={100}
+                                height={100}
+                                src="/static/logo-white.svg"
+                                alt="site logo"
+                            />
                         </Col>
-                        <Col className="">
-                            Телефон
-                            <div>
-                                <a className="lead text-white" href={`tel:${phone_number}`}>
+                        <Col className="justify-content-between text-light">
+                            <Row>
+                                <span className="info__label">Адрес: </span>
+                                <span className="info__data">{physical_address}</span>
+                            </Row>
+                            <Row>
+                                <span className="info__label">Телефон: </span>
+                                <a className="info__data" href={`tel:${phone_number}`}>
                                     {phone_number}
                                 </a>
-                            </div>
-                        </Col>
-                        <Col>
-                            E-Mail
-                            <a href={`mailto:${email}`} className="lead d-block text-white">{email}</a>
+                            </Row>
+                            <Row>
+                                <span className="info__label">E-Mail: </span>
+                                <a href={`mailto:${email}`} className="info__data">{email}</a>
+                            </Row>
                         </Col>
                     </Row>
                 </Container>
             </footer>
             <style jsx>
                 {`
+                    .info__label {
+                      margin-left: 10px;
+                      font-size: 18px;
+                      font-weight: bold;
+                      line-height: 1.5;
+
+                    }
+                    .info__data {
+                        color: #fff;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
                     .footer {
+
                         position: absolute;
                         bottom: 0;
                         width: 100%;
