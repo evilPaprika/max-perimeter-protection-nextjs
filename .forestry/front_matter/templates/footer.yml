@@ -17,5 +17,11 @@ fields:
   config:
     required: false
   label: Email
+- name: telegram_username
+  type: text
+  config:
+    required: false
+  label: Телеграм
+  description: Логин без @
 pages:
 - content/footer.md
