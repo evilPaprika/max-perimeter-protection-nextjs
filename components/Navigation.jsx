@@ -18,7 +18,7 @@ export default function Navigation() {
                             {navlinks.map(({ label, slug, sub_links }) => {
                                 if (!sub_links || !sub_links.length) {
                                     return (
-                                        <Nav.Link key={slug} href={`/templated-page/${slug}`}>
+                                        <Nav.Link key={label} href={`/templated-page/${slug}`}>
                                             {label}
                                         </Nav.Link>
                                     );
@@ -30,7 +30,7 @@ export default function Navigation() {
                                             return (
                                                 <NavDropdown.Item
                                                     className="navbar__dropdownItem"
-                                                    key={sub_slug}
+                                                    key={sub_label}
                                                     href={`/templated-page/${sub_slug}`}
                                                 >
                                                     {sub_label}
