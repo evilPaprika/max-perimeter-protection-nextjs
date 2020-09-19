@@ -22,5 +22,10 @@ fields:
     schema:
       format: markdown
   label: Описание сайта
+- name: book_call_email
+  type: text
+  config:
+    required: false
+  label: Почта для заказа звонков
 pages:
 - content/site-metadata.md
