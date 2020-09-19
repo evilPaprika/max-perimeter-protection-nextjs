@@ -1,15 +1,19 @@
 import matter from 'gray-matter';
 import Link from 'next/link';
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Media from 'react-bootstrap/Media';
 import Row from 'react-bootstrap/Row';
 
 import headerContent from '../content/header.md';
+import BookCallModal from './BookCallModal';
 
 
 export default function Header() {
     const { logo, phone_number } = matter(headerContent).data;
+    const [modalShow, setModalShow] = React.useState(false);
+
 
     return (
         <header>
@@ -38,8 +42,21 @@ export default function Header() {
                             {phone_number}
                         </h1>
                     </a>
+                    <Button
+                        onClick={() => setModalShow(true)}
+                        style={{ position: 'relative', bottom: '20px', right: '10px' }}
+                        variant="link muted"
+                        className="shadow-none"
+                    >
+                        Заказать звонок
+                    </Button>
                 </Col>
             </Row>
+            <BookCallModal
+                setShow={setModalShow}
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
             <style jsx>
                 {`
                     .title__text {
@@ -51,7 +68,7 @@ export default function Header() {
                     }
                     .phoneNumber {
                         margin-top: 40px;
-                        min-width: 300px;
+                        white-space: nowrap;
                     }
                     @media (max-width: 576px) {
                         .title__text {
@@ -63,7 +80,6 @@ export default function Header() {
                         }
                         .phoneNumber {
                             margin-top: 10px;
-                            min-width: 300px;
                             font-size: 26px;
                         }
                         .phoneNumber h1 {

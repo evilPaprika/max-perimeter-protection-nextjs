@@ -14,7 +14,11 @@
     "static-watcher": "watch -p \"components/**/*\" -p \"pages/**/*\" -p \"content/**/*\" -p \".forestry/**/*\" -p \"public/**/*\"  -c \"next build && next export\" &"
   },
   "dependencies": {
+    "@date-io/date-fns": "1.3.13",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/pickers": "^3.2.10",
     "bootstrap": "^4.5.2",
+    "date-fns": "^2.16.1",
     "glob": "^7.1.6",
     "gray-matter": "^4.0.2",
     "next": "^9.3.3",
@@ -23,7 +27,9 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.8.3",
     "react-markdown": "^4.3.1",
+    "react-phone-input-2": "^2.13.8",
     "sass": "^1.26.10",
     "watch-cli": "^0.2.3",
     "webpack": "^4.42.1"
