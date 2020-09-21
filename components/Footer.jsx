@@ -33,17 +33,17 @@ export default function Footer() {
                             </Media.Body>
                         </Col>
                         <Col className="footer__column">
-                            <span className="info__label">Адрес </span>
+                            <span className="info__label">АДРЕС </span>
                             <span className="info__data"><MarkdownContent markdownBody={physical_address} /></span>
                         </Col>
                         <Col className="footer__column">
-                            <span className="info__label">Телефон </span>
+                            <span className="info__label">ТЕЛЕФОН </span>
                             <a className="info__data" href={`tel:${phone_number}`}>
                                 {phone_number}
                             </a>
                         </Col>
                         <Col className="footer__column">
-                            <span className="info__label">E-Mail </span>
+                            <span className="info__label">E-MAIL </span>
                             <a
                                 href={`mailto:${email}`}
                                 className="info__data"
