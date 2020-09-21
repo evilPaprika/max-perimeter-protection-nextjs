@@ -6,6 +6,7 @@ import Media from 'react-bootstrap/Media';
 import Row from 'react-bootstrap/Row';
 
 import footerContent from '../content/footer.md';
+import MarkdownContent from './MarkdownContent';
 
 
 export default function Footer() {
@@ -14,10 +15,10 @@ export default function Footer() {
     return (
         <>
             <div className="backgroundImage" />
-            <footer className="footer mb-5">
+            <footer className="footer mb-4">
                 <Container>
                     <Row>
-                        <Col className="footer__column justify-content-between text-light d-lg-flex align-items-center d-none">
+                        <Col className="footer__column justify-content-between text-light d-xl-flex align-items-center d-none">
                             <img
                                 width={100}
                                 height={100}
@@ -33,7 +34,7 @@ export default function Footer() {
                         </Col>
                         <Col className="footer__column">
                             <span className="info__label">Адрес </span>
-                            <span className="info__data">{physical_address}</span>
+                            <span className="info__data"><MarkdownContent markdownBody={physical_address} /></span>
                         </Col>
                         <Col className="footer__column">
                             <span className="info__label">Телефон </span>

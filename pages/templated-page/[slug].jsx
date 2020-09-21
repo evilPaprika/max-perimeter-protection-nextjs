@@ -13,7 +13,7 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
 
     return (
         <Layout siteTitle={siteTitle}>
-            <MarkdownContent markdownBody={markdownBody} />
+            <MarkdownContent className="mt-5" markdownBody={markdownBody} />
         </Layout>
     );
 }

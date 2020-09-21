@@ -10,7 +10,7 @@ export default function Cards() {
     const { cards } = matter(landingPageContent).data;
 
     return (
-        <section className="mt-5">
+        <section className="mt-5 mb-4">
             <CardGroup
                 style={{
                     display: 'flex',
