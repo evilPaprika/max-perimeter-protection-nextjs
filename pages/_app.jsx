@@ -1,4 +1,5 @@
 import './styles.scss';
+import 'github-markdown-css';
 
 import React from 'react';
 

@@ -84,6 +84,9 @@ export default function Footer() {
                         color: #fff;
                         font-size: 16px;
                     }
+                    .info__data :global(*) {
+                        color: #fff;
+                    }
                     @media (max-width: 776px) {
                         :global(.footer__column) {
                             flex-basis: 50%;
