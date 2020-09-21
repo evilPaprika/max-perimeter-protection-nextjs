@@ -26,7 +26,7 @@ navlinks:
     sub_links: []
 - template: navlink
   label: Информация
-  slug: ''
+  slug: information
   sub_links: []
 
 ---
