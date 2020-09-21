@@ -9,7 +9,7 @@ navlinks:
   slug: our-solutions
   sub_links: []
 - template: navlink
-  label: Системы периметральных ограждений
+  label: Периметральные ограждения
   slug: perimeter-fence-systems
   sub_links:
   - template: navlink
