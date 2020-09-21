@@ -11,7 +11,11 @@ navlinks:
 - template: navlink
   label: Системы периметральных ограждений
   slug: Системы периметральных ограждений
-  sub_links: []
+  sub_links:
+  - template: navlink
+    label: Сетчатые сварные панели
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Работы
   slug: ''
