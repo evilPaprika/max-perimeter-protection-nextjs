@@ -34,7 +34,7 @@ navlinks:
   sub_links: []
 - template: navlink
   label: Системы безопасности
-  slug: ''
+  slug: Системы безопасности
   sub_links: []
 - template: navlink
   label: Контакты
