@@ -150,7 +150,7 @@ export default function BookCallModal(props) {
             )}
             {state === 'success' && (
                 <Alert variant="success" className="mb-0">
-                    <Alert.Heading>Мы получили ваш телефон</Alert.Heading>
+                    <Alert.Heading>Запрос принят!</Alert.Heading>
                     <p>
                         Мы перезвоним вам в указанное вами время
                     </p>
