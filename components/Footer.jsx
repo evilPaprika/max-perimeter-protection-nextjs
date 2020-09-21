@@ -116,6 +116,8 @@ export default function Footer() {
                         height: 600px;
                         max-width: 100%;
                         width: 100vw;
+                        position: absolute;
+                        bottom: 0;
                     }
                 `}
             </style>

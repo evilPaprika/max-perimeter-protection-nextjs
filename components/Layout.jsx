@@ -24,7 +24,9 @@ export default function Layout(props) {
                 <div className="content">{props.children}</div>
                 <style jsx>
                     {`
-  
+                      .content {
+                          padding-bottom: 600px;
+                      }
                 `}
                 </style>
             </Container>

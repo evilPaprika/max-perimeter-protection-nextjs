@@ -27,7 +27,8 @@ export default function Meta(props) {
                     
                     html, body {
                         padding: 0; margin: 0;
-                        position: relative
+                        position: relative;
+                        min-height: 100vh;
                     }
                 `}
             </style>
