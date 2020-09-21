@@ -17,6 +17,10 @@ navlinks:
     slug: mesh-panels
     sub_links: []
 - template: navlink
+  label: Системы безопасности
+  slug: " security-systems"
+  sub_links: []
+- template: navlink
   label: Работы
   slug: ''
   sub_links:
@@ -35,10 +39,6 @@ navlinks:
 - template: navlink
   label: Информация
   slug: information
-  sub_links: []
-- template: navlink
-  label: Системы безопасности
-  slug: " security-systems"
   sub_links: []
 - template: navlink
   label: Контакты
