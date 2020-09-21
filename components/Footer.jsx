@@ -33,12 +33,14 @@ export default function Footer() {
                             </Media.Body>
                         </Col>
                         <Col className="footer__column">
-                            <span className="info__label">АДРЕС </span>
-                            <span className="info__data"><MarkdownContent markdownBody={physical_address} /></span>
+                            <div className="ml-xs-0 ml-sm-0 ml-md-3 ml-lg-0 ml-xl-4 ">
+                                <span className="info__label">АДРЕС </span>
+                                <span className="info__data"><MarkdownContent markdownBody={physical_address} /></span>
+                            </div>
                         </Col>
                         <Col className="footer__column">
                             <span className="info__label">ТЕЛЕФОН </span>
-                            <a className="info__data" href={`tel:${phone_number}`}>
+                            <a className="info__data text-nowrap" href={`tel:${phone_number}`}>
                                 {phone_number}
                             </a>
                         </Col>
@@ -75,6 +77,7 @@ export default function Footer() {
                 {`
                     :global(.footer_fullLogo) {
                       margin-bottom: auto;
+                      margin-right: 60px;
                     }
                     .info__label {
                       font-size: 18px;
@@ -90,12 +93,12 @@ export default function Footer() {
                     .info__data :global(*) {
                         color: #fff;
                     }
-                    @media (max-width: 776px) {
+                    @media (max-width: 768px) {
                         :global(.footer__column) {
                             flex-basis: 50%;
                         }
                     }
-                    @media (max-width: 576px) {
+                    @media (max-width: 480px) {
                         :global(.footer__column) {
                             flex-basis: 50%;
                         }
