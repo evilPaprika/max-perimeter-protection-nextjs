@@ -1,8 +1,3 @@
-import DateFnsUtils from '@date-io/date-fns';
-import {
-    DateTimePicker,
-    MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
 import { format } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import matter from 'gray-matter';
@@ -12,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/Spinner';
+import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 import { Controller, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
 
@@ -40,9 +36,9 @@ export default function BookCallModal(props) {
                         email: book_call_email,
                     },
                     htmlContent:
-                        `${data.name} попросил(а) позвонить ему в 
-                        ${format(data.datetime, 'd MMMM HH:mm', { locale: ruLocale })} 
-                        по телефону +${data.phone_number}\n
+                        `${data.name} попросил(а) позвонить 
+                        ${format(data.datetime, 'd MMMM в HH:mm', { locale: ruLocale })},
+                         по телефону <a href="tel:+${data.phone_number}">+${data.phone_number}</a><br>
                         ${data.comment ? `Комментарий: ${data.comment}` : ''}`,
                     to: [
                         {
@@ -112,22 +108,16 @@ export default function BookCallModal(props) {
                                 <Form.Label className="mr-3 mt-1  d-block">
                                     Когда перезвонить:
                                 </Form.Label>
-                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
-                                    <Controller
-                                        as={DateTimePicker}
-                                        name="datetime"
-                                        rules={{ required: true }}
-                                        control={control}
-                                        defaultValue={new Date()}
-                                        format="d MMMM HH:mm"
-                                        ampm={false}
-                                        cancelLabel="отмена"
-                                        InputProps={{
-                                            disableUnderline: true,
-                                            className: 'form-control',
-                                        }}
-                                    />
-                                </MuiPickersUtilsProvider>
+                                <Controller
+                                    className="border rounded bookCall__dateTime"
+                                    as={DateTimePicker}
+                                    name="datetime"
+                                    rules={{ required: true }}
+                                    control={control}
+                                    format="dd MMMM y HH:mm"
+                                    locale="ru"
+                                    defaultValue={new Date()}
+                                />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Control
@@ -190,6 +180,10 @@ export default function BookCallModal(props) {
                 {`
                     .bookCallModal .modal-content{
                         min-height: 40vh;
+                    }
+                    
+                    .bookCall__dateTime .react-datetime-picker__wrapper {
+                        border: 0;
                     }
                 `}
             </style>
