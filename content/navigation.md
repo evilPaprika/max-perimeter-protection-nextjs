@@ -10,7 +10,7 @@ navlinks:
   sub_links: []
 - template: navlink
   label: Системы периметральных ограждений
-  slug: ''
+  slug: Системы периметральных ограждений
   sub_links: []
 - template: navlink
   label: Работы
