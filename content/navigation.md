@@ -9,6 +9,10 @@ navlinks:
   slug: our-solutions
   sub_links: []
 - template: navlink
+  label: Системы периметральных ограждений
+  slug: ''
+  sub_links: []
+- template: navlink
   label: Работы
   slug: ''
   sub_links:
@@ -29,7 +33,7 @@ navlinks:
   slug: information
   sub_links: []
 - template: navlink
-  label: Системы периметральных ограждений
+  label: Системы безопасности
   slug: ''
   sub_links: []
 
