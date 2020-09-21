@@ -104,6 +104,7 @@ export default function Footer() {
                         }
                     }
                     .footer__title {
+                        margin-bottom: 0;
                         font-size: 24px;
                     }
                     .footer__title_first_word {
