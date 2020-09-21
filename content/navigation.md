@@ -10,7 +10,7 @@ navlinks:
   sub_links: []
 - template: navlink
   label: Системы периметральных ограждений
-  slug: " perimeter fence systems"
+  slug: perimeter-fence-systems
   sub_links:
   - template: navlink
     label: Сетчатые сварные панели
