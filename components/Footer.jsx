@@ -18,7 +18,7 @@ export default function Footer() {
             <footer className="footer mb-4">
                 <Container>
                     <Row>
-                        <Col className="footer__column justify-content-between text-light d-xl-flex align-items-center d-none">
+                        <Col className=" footer_fullLogo footer__column justify-content-between text-light d-xl-flex align-items-center d-none">
                             <img
                                 width={90}
                                 height={90}
@@ -73,6 +73,9 @@ export default function Footer() {
             </footer>
             <style jsx>
                 {`
+                    :global(.footer_fullLogo) {
+                      margin-bottom: auto;
+                    }
                     .info__label {
                       font-size: 18px;
                       font-weight: bold;
