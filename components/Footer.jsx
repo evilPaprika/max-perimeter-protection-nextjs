@@ -53,7 +53,7 @@ export default function Footer() {
                             </a>
                         </Col>
                         <Col className="footer__column">
-                            <span className="info__label">Telegram </span>
+                            <span className="info__label">TELEGRAM </span>
                             <a
                                 href={`https://t.me/${telegram_username}`}
                                 className="info__data"
