@@ -20,8 +20,8 @@ export default function Footer() {
                     <Row>
                         <Col className="footer__column justify-content-between text-light d-xl-flex align-items-center d-none">
                             <img
-                                width={70}
-                                height={70}
+                                width={90}
+                                height={90}
                                 src="/static/logo-white.svg"
                                 alt="site logo"
                             />
@@ -105,10 +105,10 @@ export default function Footer() {
                     }
                     .footer__title {
                         margin-bottom: 0;
-                        font-size: 24px;
+                        font-size: 19px;
                     }
                     .footer__title_first_word {
-                        font-size: 29px;
+                        font-size: 23px;
                     }
                     .footer {
                         position: absolute;
