@@ -5,7 +5,7 @@ navlinks:
   slug: about-company
   sub_links: []
 - template: navlink
-  label: Наши решения
+  label: Решения
   slug: our-solutions
   sub_links: []
 - template: navlink
