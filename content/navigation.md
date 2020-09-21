@@ -14,7 +14,7 @@ navlinks:
   sub_links:
   - template: navlink
     label: Сетчатые сварные панели
-    slug: Сетчатые сварные панели
+    slug: mesh panels
     sub_links: []
 - template: navlink
   label: Работы
