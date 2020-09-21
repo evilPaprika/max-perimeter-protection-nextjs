@@ -104,6 +104,7 @@ export default function Footer() {
                         }
                     }
                     .footer__title {
+                        font-family: IntroBold, sans-serif;
                         margin-bottom: 0;
                         font-size: 19px;
                     }
