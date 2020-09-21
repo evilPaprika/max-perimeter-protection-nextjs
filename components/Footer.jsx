@@ -20,8 +20,8 @@ export default function Footer() {
                     <Row>
                         <Col className="footer__column justify-content-between text-light d-xl-flex align-items-center d-none">
                             <img
-                                width={100}
-                                height={100}
+                                width={70}
+                                height={70}
                                 src="/static/logo-white.svg"
                                 alt="site logo"
                             />
