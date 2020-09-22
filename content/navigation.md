@@ -25,7 +25,7 @@ navlinks:
     slug: ''
     sub_links: []
 - template: navlink
-  label: Работы
+  label: Системы безопасности
   slug: ''
   sub_links:
   - template: navlink
