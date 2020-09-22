@@ -40,6 +40,14 @@ navlinks:
     label: Система оповещения
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Система охранного освещения
+    slug: ''
+    sub_links: []
+  - template: navlink
+    label: ''
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Информация
   slug: information
