@@ -29,8 +29,8 @@ navlinks:
     slug: ''
     sub_links: []
   - template: navlink
-    label: Пусконаладка
-    slug: commissioning
+    label: 'Противотаранное устройство '
+    slug: ''
     sub_links: []
 - template: navlink
   label: Информация
