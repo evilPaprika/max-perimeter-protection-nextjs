@@ -25,8 +25,8 @@ navlinks:
     slug: ''
     sub_links: []
   - template: navlink
-    label: Монтаж
-    slug: mounting
+    label: Системы контроля и управления доступом
+    slug: ''
     sub_links: []
   - template: navlink
     label: Пусконаладка
