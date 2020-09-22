@@ -4,9 +4,6 @@ hero-carousel:
   picture: "/static/dns-rn2.JPG"
   caption: Подпись под картинкой (можно без нее)
 - template: hero-carousel
-  picture: "/static/04_sensitive_1440x810_4.jpg"
-  caption: ''
-- template: hero-carousel
   picture: "/static/dks-lk6.JPG"
   caption: ''
 - template: hero-carousel
@@ -14,9 +11,6 @@ hero-carousel:
   caption: ''
 - template: hero-carousel
   picture: "/static/dns-rn1.JPG"
-  caption: ''
-- template: hero-carousel
-  picture: "/static/dks-lk3.JPG"
   caption: ''
 cards:
 - template: card
