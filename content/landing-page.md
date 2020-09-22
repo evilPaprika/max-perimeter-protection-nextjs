@@ -20,7 +20,7 @@ cards:
   title: Сетчатые сварные панели
 - template: card
   caption: ''
-  picture: "/static/img-20170226-wa0004.jpg"
+  picture: "/static/img-20170226-wa0004-1.jpg"
   link_slug: commissioning
   title: Ворота и калитки
 - template: card
