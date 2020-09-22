@@ -31,7 +31,7 @@ cards:
 - template: card
   caption: ''
   link_slug: tech-support
-  picture: "/static/kamera-monitoring-w-domu.jpg"
+  picture: "/static/видео.jpg"
   title: Системы видеонаблюдения
 - template: card
   title: СКУД
