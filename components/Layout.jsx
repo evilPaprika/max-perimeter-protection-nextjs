@@ -21,6 +21,9 @@ export default function Layout(props) {
                         siteDescription={description}
                     />
                     <Header />
+
+                </Container>
+                <Container className="mt-4 mx-xl-auto navigation__container">
                     <Navigation />
                 </Container>
             </div>
@@ -45,6 +48,11 @@ export default function Layout(props) {
                           width: 100%;
                           top: -100px;
                           z-index: -1;
+                        }
+                        @media (min-width: 1200px) {
+                            :global(.navigation__container) {
+                                max-width: 100% !important;
+                            }
                         }
                     `}
             </style>

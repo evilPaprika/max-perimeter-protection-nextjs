@@ -10,7 +10,7 @@ export default function Navigation() {
 
     return (
         <>
-            <Navbar variant="light" expand="xl" className="mt-4 bg-xl-tranparent mb-3 p-xl-2  text-primary ">
+            <Navbar variant="light" expand="xl" className="mt-4 bg-xl-tranparent mb-3 px-0  text-primary ">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <span className="navbar__links">
@@ -50,19 +50,23 @@ export default function Navigation() {
                         font-size: 18px;
                         font-weight: 600;
                         white-space: nowrap;
+                        width: 100%;
                     }
                     
-                    .navbar__links .navbar-nav > *:not(:last-child) {
-                        box-shadow: 2px 0 0 var(--primary);
+                    .navbar__links .navbar-nav {
+                        justify-content: center;
                     }
                     
                     .navbar__links .navbar-nav a {
                         color: var(--primary) !important;
                     }
                     
-                    @media (max-width: 1200px) {
+                    @media (min-width: 1200px) {
                         .navbar__links .navbar-nav > *:not(:last-child) {
-                            box-shadow: none;
+                            box-shadow: 10px 0 0 -7px var(--primary);
+                        }
+                        .navbar__links .navbar-nav > * {
+                            margin: 0 3px;
                         }
                     }
                     @media (max-width: 576px) {
