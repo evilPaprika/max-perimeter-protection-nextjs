@@ -40,7 +40,7 @@ cards:
   link_slug: ''
 - template: card
   title: Противотаранное устройство
-  caption: Нужно потестить переход на вторую строку
+  caption: ''
   picture: "/static/road-blocker-barrier.jpeg"
   link_slug: empty
 
