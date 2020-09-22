@@ -18,14 +18,6 @@ navlinks:
     sub_links: []
 - template: navlink
   label: Системы безопасности
-  slug: " security-systems"
-  sub_links:
-  - template: navlink
-    label: Системы видеонаблюдения
-    slug: ''
-    sub_links: []
-- template: navlink
-  label: Системы безопасности
   slug: ''
   sub_links:
   - template: navlink
