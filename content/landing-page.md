@@ -38,6 +38,11 @@ cards:
   picture: "/static/dp-lk2.jpg"
   caption: ''
   link_slug: ''
+- template: card
+  title: СКУД
+  picture: "/static/access-control-slider_2.jpg"
+  caption: ''
+  link_slug: ''
 
 ---
 Тут можно написать контент который будет отображаться под остальными элементами
