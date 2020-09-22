@@ -1,6 +1,6 @@
 ---
 
 ---
-#### **Котировки мировых рынков**
+## **Котировки мировых рынков**
 
 <iframe style="width:100%;border:0;overflow:hidden;background-color:transparent;height:235px" scrolling="no" src="https://fortrader.org/informers/getInformer?st=1&cat=13&title=%D0%A6%D0%B5%D0%BD%D1%8B%20%D0%BD%D0%B0%20%D1%81%D1%8B%D1%80%D1%8C%D0%B5&texts=%7B%22toolTitle%22%3A%22%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%22%2C%22bid%22%3A%22%D0%A6%D0%B5%D0%BD%D0%B0%22%7D&mult=1&showGetBtn=0&w=0&colors=false&items=47%2C25460&columns=bid"></iframe> <iframe style="width:100%;border:0;overflow:hidden;background-color:transparent;height:260px" scrolling="no" src="https://fortrader.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%2C%22tomorrowCourse%22%3A%22%D0%97%D0%B0%D0%B2%D1%82%D1%80%D0%B0%22%7D&mult=1&showGetBtn=0&hideHeader=0&hideDate=0&w=0&codes=1&colors=false&items=2%2C21&columns=todayCourse%2CtomorrowCourse&toCur=11111"></iframe>
