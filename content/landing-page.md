@@ -19,8 +19,7 @@ cards:
   picture: "/static/dks-lk3.JPG"
   title: Сетчатые сварные панели
 - template: card
-  caption: тут текст подлиннее текст текст текст текст текст текст текст текст текст
-    текст текст текст текст, а дальше будет пусто
+  caption: Информация обновляется
   picture: "/static/f0124636-service_man_connecting_cable_for_home_tv.jpg"
   link_slug: commissioning
   title: Пусконаладка
