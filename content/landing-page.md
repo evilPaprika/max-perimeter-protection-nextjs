@@ -35,7 +35,7 @@ cards:
   title: Системы видеонаблюдения
 - template: card
   title: Лотки для кабельной продукции
-  picture: ''
+  picture: "/static/dp-lk2.jpg"
   caption: ''
   link_slug: ''
 
