@@ -10,7 +10,7 @@ export default function Navigation() {
 
     return (
         <>
-            <Navbar bg="primary" variant="dark" expand="sm" className="mt-4 mb-3">
+            <Navbar bg="primary" variant="dark" expand="xl" className="mt-4 mb-3">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <span className="navbar__links">
