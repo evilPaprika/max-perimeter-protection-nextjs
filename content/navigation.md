@@ -36,6 +36,10 @@ navlinks:
     label: Охранная сигнализация
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Система оповещения
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Информация
   slug: information
