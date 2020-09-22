@@ -108,6 +108,10 @@ export default function Footer() {
                         .info__data {
                             font-size: 12px;
                         }
+                        
+                        .info__data :global(.markdown-body) {
+                            font-size: 12px;
+                        }
                     }
                     .footer__title {
                         font-family: IntroBold, sans-serif;
