@@ -5,7 +5,7 @@ navlinks:
   slug: about-company
   sub_links: []
 - template: navlink
-  label: Решения
+  label: НАШИ РЕШЕНИЯ
   slug: our-solutions
   sub_links: []
 - template: navlink
@@ -18,14 +18,6 @@ navlinks:
     sub_links: []
 - template: navlink
   label: Системы безопасности
-  slug: " security-systems"
-  sub_links:
-  - template: navlink
-    label: Системы видеонаблюдения
-    slug: ''
-    sub_links: []
-- template: navlink
-  label: Работы
   slug: ''
   sub_links:
   - template: navlink
