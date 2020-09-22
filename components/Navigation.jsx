@@ -10,48 +10,42 @@ export default function Navigation() {
 
     return (
         <>
-            <div className="navbar__container">
-                <Navbar variant="light" expand="xl" className="mt-4 bg-xl-tranparent mb-3 p-xl-2  text-primary ">
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <span className="navbar__links">
-                            <Nav className="mr-auto">
-                                {navlinks.map(({ label, slug, sub_links }) => {
-                                    if (!sub_links || !sub_links.length) {
-                                        return (
-                                            <Nav.Link key={label} href={`/templated-page/${slug}`}>
-                                                {label}
-                                            </Nav.Link>
-                                        );
-                                    }
-
+            <Navbar variant="light" expand="xl" className="mt-4 bg-xl-tranparent mb-3 p-xl-2  text-primary ">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <span className="navbar__links">
+                        <Nav className="mr-auto">
+                            {navlinks.map(({ label, slug, sub_links }) => {
+                                if (!sub_links || !sub_links.length) {
                                     return (
-                                        <NavDropdown key={label} title={label} id="basic-nav-dropdown">
-                                            {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
-                                                return (
-                                                    <NavDropdown.Item
-                                                        className="navbar__dropdownItem"
-                                                        key={sub_label}
-                                                        href={`/templated-page/${sub_slug}`}
-                                                    >
-                                                        {sub_label}
-                                                    </NavDropdown.Item>
-                                                );
-                                            })}
-                                        </NavDropdown>
+                                        <Nav.Link key={label} href={`/templated-page/${slug}`}>
+                                            {label}
+                                        </Nav.Link>
                                     );
-                                })}
-                            </Nav>
-                        </span>
-                    </Navbar.Collapse>
-                </Navbar>
-            </div>
+                                }
+
+                                return (
+                                    <NavDropdown key={label} title={label} id="basic-nav-dropdown">
+                                        {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
+                                            return (
+                                                <NavDropdown.Item
+                                                    className="navbar__dropdownItem"
+                                                    key={sub_label}
+                                                    href={`/templated-page/${sub_slug}`}
+                                                >
+                                                    {sub_label}
+                                                </NavDropdown.Item>
+                                            );
+                                        })}
+                                    </NavDropdown>
+                                );
+                            })}
+                        </Nav>
+                    </span>
+                </Navbar.Collapse>
+            </Navbar>
             <style global jsx>
                 {`
-                    .navbar__container {
-                        //width: 100vw;
-                        //background-color: #e7e7e7;
-                    }
                     .navbar__links {
                         font-size: 18px;
                         font-weight: 500;

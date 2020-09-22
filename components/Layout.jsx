@@ -40,7 +40,6 @@ export default function Layout(props) {
                       .topBox::before {
                           content: '';
                           height: calc(100% + 400px);
-                          //height: 230px;
                           background: #e7e7e7;
                           position: absolute;
                           width: 100%;
