@@ -32,6 +32,10 @@ navlinks:
     label: 'Противотаранное устройство '
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Охранная сигнализация
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Информация
   slug: information
