@@ -46,7 +46,7 @@ navlinks:
   sub_links: []
 - template: navlink
   label: Контакты
-  slug: " contacts"
+  slug: contacts
   sub_links: []
 
 ---
