@@ -19,10 +19,10 @@ cards:
   picture: "/static/dks-lk3.JPG"
   title: Сетчатые сварные панели
 - template: card
-  caption: Информация обновляется
-  picture: "/static/f0124636-service_man_connecting_cable_for_home_tv.jpg"
+  caption: ''
+  picture: "/static/img-20170226-wa0004.jpg"
   link_slug: commissioning
-  title: Пусконаладка
+  title: Ворота и калитки
 - template: card
   caption: ''
   link_slug: tech-support
