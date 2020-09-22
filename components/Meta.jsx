@@ -22,6 +22,7 @@ export default function Meta(props) {
                       font-family: IntroBold;
                       src: url('/static/Intro-Bold-Alt.ttf');
                       font-weight: bold;
+                      font-display: swap;
                       font-style: normal;
                     }
                     

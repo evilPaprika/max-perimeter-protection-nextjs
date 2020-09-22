@@ -10,7 +10,7 @@ export default function Navigation() {
 
     return (
         <>
-            <Navbar bg="primary" variant="dark" expand="xl" className="mt-4 mb-3">
+            <Navbar bg="primary" variant="dark" expand="xl" className="mt-4 mb-3 p-xl-2">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <span className="navbar__links">
@@ -48,8 +48,23 @@ export default function Navigation() {
                 {`
                     .navbar__links {
                         font-size: 18px;
-                        font-weight: 600;
+                        font-weight: 500;
                         white-space: nowrap;
+                    }
+                    
+                    .navbar__links .navbar-nav > *:not(:last-child) {
+                        box-shadow: 2px 0 0 #ffffffcc;
+                    }
+                    
+                    @media (max-width: 992px) {
+                        .navbar__links .navbar-nav > *:not(:last-child) {
+                            box-shadow: none;
+                        }
+                    }
+                    @media (max-width: 576px) {
+                        .navbar__links .navbar-nav a {
+                            white-space: normal;
+                        }
                     }
                 `}
             </style>
