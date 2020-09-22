@@ -21,8 +21,8 @@ navlinks:
   slug: ''
   sub_links:
   - template: navlink
-    label: Проектирование
-    slug: planning
+    label: Системы видеонаблюдения
+    slug: ''
     sub_links: []
   - template: navlink
     label: Монтаж
