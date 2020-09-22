@@ -4,13 +4,13 @@ hero-carousel:
   picture: "/static/dns-rn2.JPG"
   caption: Подпись под картинкой (можно без нее)
 - template: hero-carousel
+  picture: "/static/dns-rn1.JPG"
+  caption: ''
+- template: hero-carousel
   picture: "/static/dks-lk6.JPG"
   caption: ''
 - template: hero-carousel
-  picture: "/static/kust-rn1.JPG"
-  caption: ''
-- template: hero-carousel
-  picture: "/static/dns-rn1.JPG"
+  picture: "/static/kust-rn2.jpeg"
   caption: ''
 cards:
 - template: card
