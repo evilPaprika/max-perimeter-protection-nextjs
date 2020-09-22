@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import React from 'react';
+import React, { useState } from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 import navigationContent from '../content/navigation.md';
@@ -24,8 +24,23 @@ export default function Navigation() {
                                     );
                                 }
 
+                                const [show, setShow] = useState(false);
+                                const showDropdown = () => {
+                                    setShow(!show);
+                                };
+                                const hideDropdown = () => {
+                                    setShow(false);
+                                };
+
                                 return (
-                                    <NavDropdown key={label} title={label} id="basic-nav-dropdown">
+                                    <NavDropdown
+                                        key={label}
+                                        title={label}
+                                        id="basic-nav-dropdown"
+                                        show={show}
+                                        onMouseEnter={showDropdown}
+                                        onMouseLeave={hideDropdown}
+                                    >
                                         {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
                                             return (
                                                 <NavDropdown.Item

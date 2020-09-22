@@ -6,4 +6,12 @@ $navbar-dark-color: rgba(255, 255, 255, 0.8);
 $navbar-dark-hover-color: rgba(255, 255, 255);
 $font-family-base: Roboto, sans-serif;
 
+.dropdown-toggle::after {
+  transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px);
+}
+
 @import '~bootstrap/scss/bootstrap';
