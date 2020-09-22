@@ -14,10 +14,10 @@ hero-carousel:
   caption: ''
 cards:
 - template: card
-  caption: тут какой-то текст еще, вот
+  caption: Информация обновляется
   link_slug: mounting
-  picture: "/static/installation-power.jpg"
-  title: Монтаж
+  picture: "/static/dks-lk3.JPG"
+  title: Сетчатые сварные панели
 - template: card
   caption: тут текст подлиннее текст текст текст текст текст текст текст текст текст
     текст текст текст текст, а дальше будет пусто
