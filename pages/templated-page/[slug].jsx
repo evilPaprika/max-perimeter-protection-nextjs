@@ -12,9 +12,18 @@ export default function PageTemplate({ frontmatter, markdownBody, siteTitle }) {
     if (!frontmatter) { return <></>; }
 
     return (
-        <Layout siteTitle={siteTitle}>
-            <MarkdownContent className="mt-5" markdownBody={markdownBody} />
-        </Layout>
+        <>
+            <Layout siteTitle={siteTitle}>
+                <MarkdownContent className="mt-5" markdownBody={markdownBody} />
+            </Layout>
+            <style global jsx>
+                {`
+                    .topBox::before {
+                          height: calc(100% + 100px) !important;
+                    }
+                `}
+            </style>
+        </>
     );
 }
 

@@ -26,9 +26,12 @@ export default function Meta(props) {
                       font-style: normal;
                     }
                     
+                    html {
+                        position: relative;
+                    }
+                    
                     html, body {
                         padding: 0; margin: 0;
-                        position: relative;
                         min-height: 100vh;
                     }
                 `}

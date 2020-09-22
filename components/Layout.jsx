@@ -14,23 +14,41 @@ export default function Layout(props) {
 
     return (
         <>
+            <div className="topBox">
+                <Container className="mt-4">
+                    <Meta
+                        siteTitle={title}
+                        siteDescription={description}
+                    />
+                    <Header />
+                    <Navigation />
+                </Container>
+            </div>
             <Container className="mt-4">
-                <Meta
-                    siteTitle={title}
-                    siteDescription={description}
-                />
-                <Header />
-                <Navigation />
                 <div className="content">{props.children}</div>
-                <style jsx>
-                    {`
+            </Container>
+
+            <Footer />
+            <style jsx>
+                {`
                       .content {
                           padding-bottom: 600px;
                       }
-                `}
-                </style>
-            </Container>
-            <Footer />
+                      .topBox {
+                         position: relative;
+                      }
+                      .topBox::before {
+                          content: '';
+                          height: calc(100% + 400px);
+                          //height: 230px;
+                          background: #e7e7e7;
+                          position: absolute;
+                          width: 100%;
+                          top: -100px;
+                          z-index: -1;
+                        }
+                    `}
+            </style>
         </>
     );
 }

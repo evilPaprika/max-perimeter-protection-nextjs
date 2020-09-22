@@ -10,42 +10,48 @@ export default function Navigation() {
 
     return (
         <>
-            <Navbar bg="primary" variant="dark" expand="xl" className="mt-4 mb-3 p-xl-2">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <span className="navbar__links">
-                        <Nav className="mr-auto">
-                            {navlinks.map(({ label, slug, sub_links }) => {
-                                if (!sub_links || !sub_links.length) {
-                                    return (
-                                        <Nav.Link key={label} href={`/templated-page/${slug}`}>
-                                            {label}
-                                        </Nav.Link>
-                                    );
-                                }
+            <div className="navbar__container">
+                <Navbar variant="light" expand="xl" className="mt-4 bg-xl-tranparent mb-3 p-xl-2  text-primary ">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <span className="navbar__links">
+                            <Nav className="mr-auto">
+                                {navlinks.map(({ label, slug, sub_links }) => {
+                                    if (!sub_links || !sub_links.length) {
+                                        return (
+                                            <Nav.Link key={label} href={`/templated-page/${slug}`}>
+                                                {label}
+                                            </Nav.Link>
+                                        );
+                                    }
 
-                                return (
-                                    <NavDropdown key={label} title={label} id="basic-nav-dropdown">
-                                        {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
-                                            return (
-                                                <NavDropdown.Item
-                                                    className="navbar__dropdownItem"
-                                                    key={sub_label}
-                                                    href={`/templated-page/${sub_slug}`}
-                                                >
-                                                    {sub_label}
-                                                </NavDropdown.Item>
-                                            );
-                                        })}
-                                    </NavDropdown>
-                                );
-                            })}
-                        </Nav>
-                    </span>
-                </Navbar.Collapse>
-            </Navbar>
+                                    return (
+                                        <NavDropdown key={label} title={label} id="basic-nav-dropdown">
+                                            {sub_links.map(({ label: sub_label, slug: sub_slug }) => {
+                                                return (
+                                                    <NavDropdown.Item
+                                                        className="navbar__dropdownItem"
+                                                        key={sub_label}
+                                                        href={`/templated-page/${sub_slug}`}
+                                                    >
+                                                        {sub_label}
+                                                    </NavDropdown.Item>
+                                                );
+                                            })}
+                                        </NavDropdown>
+                                    );
+                                })}
+                            </Nav>
+                        </span>
+                    </Navbar.Collapse>
+                </Navbar>
+            </div>
             <style global jsx>
                 {`
+                    .navbar__container {
+                        //width: 100vw;
+                        //background-color: #e7e7e7;
+                    }
                     .navbar__links {
                         font-size: 18px;
                         font-weight: 500;
@@ -53,10 +59,14 @@ export default function Navigation() {
                     }
                     
                     .navbar__links .navbar-nav > *:not(:last-child) {
-                        box-shadow: 2px 0 0 #ffffffcc;
+                        box-shadow: 2px 0 0 var(--primary);
                     }
                     
-                    @media (max-width: 992px) {
+                    .navbar__links .navbar-nav a {
+                        color: var(--primary) !important;
+                    }
+                    
+                    @media (max-width: 1200px) {
                         .navbar__links .navbar-nav > *:not(:last-child) {
                             box-shadow: none;
                         }
