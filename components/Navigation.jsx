@@ -48,7 +48,7 @@ export default function Navigation() {
                 {`
                     .navbar__links {
                         font-size: 18px;
-                        font-weight: 500;
+                        font-weight: 600;
                         white-space: nowrap;
                     }
                     
