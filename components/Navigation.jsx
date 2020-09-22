@@ -57,8 +57,8 @@ export default function Navigation() {
                         justify-content: center;
                     }
                     
-                    .navbar__links .navbar-nav a {
-                        color: var(--primary) !important;
+                    .navbar__links .navbar-nav .nav-link {
+                        color: var(--primary);
                     }
                     
                     @media (min-width: 1200px) {
