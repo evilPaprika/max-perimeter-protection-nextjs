@@ -39,9 +39,9 @@ cards:
   caption: ''
   link_slug: ''
 - template: card
-  title: Четвертая карточка
+  title: Противотаранное устройство
   caption: Нужно потестить переход на вторую строку
-  picture: "/static/johannes-andersson-joshua-tree.jpg"
+  picture: "/static/road-blocker-barrier.jpeg"
   link_slug: empty
 
 ---
