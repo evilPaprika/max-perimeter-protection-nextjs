@@ -35,7 +35,7 @@ cards:
   title: Системы видеонаблюдения
 - template: card
   title: СКУД
-  picture: "/static/access-control-slider_2.jpg"
+  picture: "/static/accesscard_900.jpg"
   caption: ''
   link_slug: ''
 - template: card
