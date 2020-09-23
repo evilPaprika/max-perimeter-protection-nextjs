@@ -26,7 +26,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Системы контроля и управления доступом
-    slug: ''
+    slug: security-systems
     sub_links: []
   - template: navlink
     label: 'Противотаранное устройство '
