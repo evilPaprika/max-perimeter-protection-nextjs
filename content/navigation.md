@@ -36,6 +36,10 @@ navlinks:
     label: Противоподкопные барьеры
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Крепления и расходные материалы
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
