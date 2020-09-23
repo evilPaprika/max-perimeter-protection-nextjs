@@ -22,7 +22,7 @@ navlinks:
   sub_links:
   - template: navlink
     label: Системы видеонаблюдения
-    slug: ''
+    slug: video-systems
     sub_links: []
   - template: navlink
     label: Системы контроля и управления доступом
