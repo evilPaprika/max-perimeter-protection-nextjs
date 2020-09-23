@@ -32,6 +32,10 @@ navlinks:
     label: Козырьковые заграждения
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Противоподкопные барьеры
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
