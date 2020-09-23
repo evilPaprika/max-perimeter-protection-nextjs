@@ -35,7 +35,7 @@ cards:
   title: Системы видеонаблюдения
 - template: card
   title: СКУД
-  picture: "/static/2020-09-23-12-40-08.png"
+  picture: "/static/turnstile574.jpg"
   caption: ''
   link_slug: ''
 - template: card
