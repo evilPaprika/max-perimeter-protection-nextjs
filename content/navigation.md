@@ -46,7 +46,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Система отслеживания подвижных объектов
-    slug: ''
+    slug: moving-object-system
     sub_links: []
 - template: navlink
   label: Информация
