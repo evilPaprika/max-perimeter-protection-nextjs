@@ -42,7 +42,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Система охранного освещения
-    slug: ''
+    slug: security-lighting-system
     sub_links: []
   - template: navlink
     label: Система отслеживания подвижных объектов
