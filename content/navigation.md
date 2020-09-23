@@ -24,6 +24,10 @@ navlinks:
     label: Ворота и калитки
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Лотки для кабельной продукции
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
