@@ -7,7 +7,7 @@ hero-carousel:
   picture: "/static/dns-rn1.JPG"
   caption: ''
 - template: hero-carousel
-  picture: "/static/2.JPG"
+  picture: ''
   caption: ''
 - template: hero-carousel
   picture: "/static/dks-lk6.JPG"
