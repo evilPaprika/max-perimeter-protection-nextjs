@@ -12,9 +12,6 @@ hero-carousel:
 - template: hero-carousel
   picture: "/static/kust-rn2.jpeg"
   caption: ''
-- template: hero-carousel
-  picture: "/static/2020-09-23-10-33-46.png"
-  caption: ''
 cards:
 - template: card
   caption: Информация обновляется
