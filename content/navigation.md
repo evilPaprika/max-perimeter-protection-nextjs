@@ -28,6 +28,10 @@ navlinks:
     label: Лотки для кабельной продукции
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Козырьковые заграждения
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
