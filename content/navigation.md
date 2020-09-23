@@ -26,7 +26,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Системы контроля и управления доступом
-    slug: security-systems
+    slug: access-control
     sub_links: []
   - template: navlink
     label: 'Противотаранное устройство '
@@ -34,7 +34,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Охранная сигнализация
-    slug: ''
+    slug: security
     sub_links: []
   - template: navlink
     label: Система оповещения
