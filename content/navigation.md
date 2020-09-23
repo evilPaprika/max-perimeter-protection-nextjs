@@ -30,7 +30,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: 'Противотаранное устройство '
-    slug: " anti-ram-device"
+    slug: anti-ram-device
     sub_links: []
   - template: navlink
     label: Охранная сигнализация
