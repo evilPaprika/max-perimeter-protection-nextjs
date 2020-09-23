@@ -20,6 +20,10 @@ navlinks:
     label: Стойки ограждения
     slug: ''
     sub_links: []
+  - template: navlink
+    label: Ворота и калитки
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
