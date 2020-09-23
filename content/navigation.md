@@ -16,6 +16,10 @@ navlinks:
     label: Сетчатые сварные панели
     slug: mesh-panels
     sub_links: []
+  - template: navlink
+    label: Стойки ограждения
+    slug: ''
+    sub_links: []
 - template: navlink
   label: Системы безопасности
   slug: ''
