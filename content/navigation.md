@@ -26,7 +26,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Лотки для кабельной продукции
-    slug: ''
+    slug: cable-trays
     sub_links: []
   - template: navlink
     label: Козырьковые заграждения
