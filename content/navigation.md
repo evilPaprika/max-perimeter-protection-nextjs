@@ -30,7 +30,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Козырьковые заграждения
-    slug: ''
+    slug: barbed-wire
     sub_links: []
   - template: navlink
     label: Противоподкопные барьеры
