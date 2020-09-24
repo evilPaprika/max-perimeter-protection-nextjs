@@ -1,3 +1,5 @@
+import DateFnsUtils from '@date-io/date-fns';
+import { DatePicker, MuiPickersUtilsProvider, TimePicker } from '@material-ui/pickers';
 import { format } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import matter from 'gray-matter';
@@ -37,7 +39,8 @@ export default function BookCallModal(props) {
                     },
                     htmlContent:
                         `${data.name} попросил(а) позвонить 
-                        ${format(data.datetime, 'd MMMM в HH:mm', { locale: ruLocale })},
+                        ${format(data.date, 'd MMMM', { locale: ruLocale })},
+                        ${format(data.time, 'в HH:mm', { locale: ruLocale })},
                          по телефону <a href="tel:+${data.phone_number}">+${data.phone_number}</a><br>
                         ${data.comment ? `Комментарий: ${data.comment}` : ''}`,
                     to: [
@@ -108,16 +111,37 @@ export default function BookCallModal(props) {
                                 <Form.Label className="mr-3 mt-1  d-block">
                                     Когда перезвонить:
                                 </Form.Label>
-                                <Controller
-                                    className="border rounded bookCall__dateTime"
-                                    as={DateTimePicker}
-                                    name="datetime"
-                                    rules={{ required: true }}
-                                    control={control}
-                                    format="dd MMMM y HH:mm"
-                                    locale="ru"
-                                    defaultValue={new Date()}
-                                />
+                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
+                                    <Controller
+                                        as={DatePicker}
+                                        name="date"
+                                        rules={{ required: true }}
+                                        control={control}
+                                        defaultValue={new Date()}
+                                        format="d MMMM yyyy"
+                                        cancelLabel="отмена"
+                                        InputProps={{
+                                            disableUnderline: true,
+                                            className: 'form-control',
+                                        }}
+                                    />
+                                </MuiPickersUtilsProvider>
+                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
+                                    <Controller
+                                        as={TimePicker}
+                                        name="time"
+                                        rules={{ required: true }}
+                                        control={control}
+                                        defaultValue={new Date()}
+                                        format="HH:mm"
+                                        ampm={false}
+                                        cancelLabel="отмена"
+                                        InputProps={{
+                                            disableUnderline: true,
+                                            className: 'form-control',
+                                        }}
+                                    />
+                                </MuiPickersUtilsProvider>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Control
