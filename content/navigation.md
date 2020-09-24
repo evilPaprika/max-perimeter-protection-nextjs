@@ -38,7 +38,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Крепления и расходные материалы
-    slug: ''
+    slug: expendable-materials
     sub_links: []
 - template: navlink
   label: Системы безопасности
