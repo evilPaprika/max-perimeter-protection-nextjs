@@ -3,7 +3,7 @@ import { DatePicker, MuiPickersUtilsProvider, TimePicker } from '@material-ui/pi
 import { format } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import matter from 'gray-matter';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -15,12 +15,38 @@ import PhoneInput from 'react-phone-input-2';
 import siteMetadataContent from '../content/site-metadata.md';
 
 
+function getWindowDimensions() {
+    const width = process.browser ? window.innerWidth : 1000;
+
+    return {
+        width,
+    };
+}
+
+function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowDimensions;
+}
+
+
 export default function BookCallModal({ setShow, ...props }) {
     const { register, handleSubmit, errors, control } = useForm();
     const { book_call_email } = matter(siteMetadataContent).data;
     const [state, setState] = useState(null);
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState(new Date());
+    const { width } = useWindowDimensions();
 
     const onSubmit = (data) => {
         setState('loading');
@@ -41,7 +67,7 @@ export default function BookCallModal({ setShow, ...props }) {
                     htmlContent:
                         `${data.name} попросил(а) позвонить 
                         ${format(date, 'd MMMM', { locale: ruLocale })},
-                        ${format(time, 'в HH:mm', { locale: ruLocale })},
+                        ${width > 500 ? (format(time, 'в HH:mm,', { locale: ruLocale })) : ''} 
                          по телефону <a href="tel:+${data.phone_number}">+${data.phone_number}</a><br>
                         ${data.comment ? `Комментарий: ${data.comment}` : ''}`,
                     to: [
@@ -127,18 +153,21 @@ export default function BookCallModal({ setShow, ...props }) {
                                             className: 'form-control',
                                         }}
                                     />
-                                    <TimePicker
-                                        value={time}
-                                        onChange={setTime}
-                                        format="HH:mm"
-                                        ampm={false}
-                                        cancelLabel="отмена"
-                                        autoOk
-                                        InputProps={{
-                                            disableUnderline: true,
-                                            className: 'form-control',
-                                        }}
-                                    />
+                                    {width > 500
+                                    && (
+                                        <TimePicker
+                                            value={time}
+                                            onChange={setTime}
+                                            format="HH:mm"
+                                            ampm={false}
+                                            cancelLabel="отмена"
+                                            autoOk
+                                            InputProps={{
+                                                disableUnderline: true,
+                                                className: 'form-control',
+                                            }}
+                                        />
+                                    )}
                                 </MuiPickersUtilsProvider>
                             </Form.Group>
                             <Form.Group>
