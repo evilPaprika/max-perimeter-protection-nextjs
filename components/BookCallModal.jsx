@@ -1,5 +1,3 @@
-import DateFnsUtils from '@date-io/date-fns';
-import { DatePicker, MuiPickersUtilsProvider, TimePicker } from '@material-ui/pickers';
 import { format } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import matter from 'gray-matter';
@@ -9,17 +7,23 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/Spinner';
-import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
+import DatePicker, { registerLocale, setDefaultLocale } from 'react-datepicker';
 import { Controller, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
 
 import siteMetadataContent from '../content/site-metadata.md';
 
 
-export default function BookCallModal(props) {
+registerLocale('ru', ruLocale);
+setDefaultLocale('ru');
+
+
+export default function BookCallModal({ setShow, ...props }) {
     const { register, handleSubmit, errors, control } = useForm();
     const { book_call_email } = matter(siteMetadataContent).data;
     const [state, setState] = useState(null);
+    const [date, setDate] = useState(new Date());
+    const [time, setTime] = useState(new Date());
 
     const onSubmit = (data) => {
         setState('loading');
@@ -39,8 +43,8 @@ export default function BookCallModal(props) {
                     },
                     htmlContent:
                         `${data.name} попросил(а) позвонить 
-                        ${format(data.date, 'd MMMM', { locale: ruLocale })},
-                        ${format(data.time, 'в HH:mm', { locale: ruLocale })},
+                        ${format(date, 'd MMMM', { locale: ruLocale })},
+                        ${format(time, 'в HH:mm', { locale: ruLocale })},
                          по телефону <a href="tel:+${data.phone_number}">+${data.phone_number}</a><br>
                         ${data.comment ? `Комментарий: ${data.comment}` : ''}`,
                     to: [
@@ -72,6 +76,7 @@ export default function BookCallModal(props) {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+
                         <Form onSubmit={handleSubmit(onSubmit)}>
                             <Form.Group>
                                 <Form.Label className="mr-3 mt-1  d-block">
@@ -111,37 +116,24 @@ export default function BookCallModal(props) {
                                 <Form.Label className="mr-3 mt-1  d-block">
                                     Когда перезвонить:
                                 </Form.Label>
-                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
-                                    <Controller
-                                        as={DatePicker}
-                                        name="date"
-                                        rules={{ required: true }}
-                                        control={control}
-                                        defaultValue={new Date()}
-                                        format="d MMMM yyyy"
-                                        cancelLabel="отмена"
-                                        InputProps={{
-                                            disableUnderline: true,
-                                            className: 'form-control',
-                                        }}
-                                    />
-                                </MuiPickersUtilsProvider>
-                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
-                                    <Controller
-                                        as={TimePicker}
-                                        name="time"
-                                        rules={{ required: true }}
-                                        control={control}
-                                        defaultValue={new Date()}
-                                        format="HH:mm"
-                                        ampm={false}
-                                        cancelLabel="отмена"
-                                        InputProps={{
-                                            disableUnderline: true,
-                                            className: 'form-control',
-                                        }}
-                                    />
-                                </MuiPickersUtilsProvider>
+                                <DatePicker
+                                    selected={date}
+                                    onChange={(date) => setDate(date)}
+                                    className="form-control"
+                                    defaultValue={new Date()}
+                                    minDate={new Date()}
+                                    dateFormat="d MMMM yyyy"
+                                />
+                                <DatePicker
+                                    selected={time}
+                                    onChange={(time) => setTime(time)}
+                                    className="form-control"
+                                    defaultValue={new Date()}
+                                    dateFormat="HH:mm"
+                                    showTimeSelect
+                                    timeCaption="Время"
+                                    showTimeSelectOnly
+                                />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Control
@@ -173,7 +165,7 @@ export default function BookCallModal(props) {
                         className="float-right"
                         variant="success"
                         onClick={() => {
-                            props.setShow(false);
+                            setShow(false);
                             setState(null);
                         }}
                     >
@@ -192,7 +184,7 @@ export default function BookCallModal(props) {
                         className="float-right"
                         variant="warning"
                         onClick={() => {
-                            props.setShow(false);
+                            setShow(false);
                             setState(null);
                         }}
                     >
