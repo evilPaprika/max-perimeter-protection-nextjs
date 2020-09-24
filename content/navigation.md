@@ -18,7 +18,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Стойки ограждения
-    slug: ''
+    slug: fence-posts
     sub_links: []
   - template: navlink
     label: Ворота и калитки
