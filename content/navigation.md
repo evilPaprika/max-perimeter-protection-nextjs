@@ -34,7 +34,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Противоподкопные барьеры
-    slug: ''
+    slug: underground-barriers
     sub_links: []
   - template: navlink
     label: Крепления и расходные материалы
