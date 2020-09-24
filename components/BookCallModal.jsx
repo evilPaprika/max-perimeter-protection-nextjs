@@ -1,3 +1,5 @@
+import DateFnsUtils from '@date-io/date-fns';
+import { DatePicker, MuiPickersUtilsProvider, TimePicker } from '@material-ui/pickers';
 import { format } from 'date-fns';
 import ruLocale from 'date-fns/locale/ru';
 import matter from 'gray-matter';
@@ -7,15 +9,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/Spinner';
-import DatePicker, { registerLocale, setDefaultLocale } from 'react-datepicker';
 import { Controller, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
 
 import siteMetadataContent from '../content/site-metadata.md';
-
-
-registerLocale('ru', ruLocale);
-setDefaultLocale('ru');
 
 
 export default function BookCallModal({ setShow, ...props }) {
@@ -116,24 +113,33 @@ export default function BookCallModal({ setShow, ...props }) {
                                 <Form.Label className="mr-3 mt-1  d-block">
                                     Когда перезвонить:
                                 </Form.Label>
-                                <DatePicker
-                                    selected={date}
-                                    onChange={(date) => setDate(date)}
-                                    className="form-control"
-                                    defaultValue={new Date()}
-                                    minDate={new Date()}
-                                    dateFormat="d MMMM yyyy"
-                                />
-                                <DatePicker
-                                    selected={time}
-                                    onChange={(time) => setTime(time)}
-                                    className="form-control"
-                                    defaultValue={new Date()}
-                                    dateFormat="HH:mm"
-                                    showTimeSelect
-                                    timeCaption="Время"
-                                    showTimeSelectOnly
-                                />
+                                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
+                                    <DatePicker
+                                        value={date}
+                                        onChange={setDate}
+                                        format="d MMMM yyyy"
+                                        cancelLabel="отмена"
+                                        className="mr-3"
+                                        disablePast
+                                        autoOk
+                                        InputProps={{
+                                            disableUnderline: true,
+                                            className: 'form-control',
+                                        }}
+                                    />
+                                    <TimePicker
+                                        value={time}
+                                        onChange={setTime}
+                                        format="HH:mm"
+                                        ampm={false}
+                                        cancelLabel="отмена"
+                                        autoOk
+                                        InputProps={{
+                                            disableUnderline: true,
+                                            className: 'form-control',
+                                        }}
+                                    />
+                                </MuiPickersUtilsProvider>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Control
