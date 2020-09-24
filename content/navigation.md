@@ -22,7 +22,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Ворота и калитки
-    slug: ''
+    slug: gates
     sub_links: []
   - template: navlink
     label: Лотки для кабельной продукции
