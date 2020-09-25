@@ -37,7 +37,7 @@ cards:
   title: СКУД
   picture: "/static/turnstile574.jpg"
   caption: ''
-  link_slug: ''
+  link_slug: access-control
 - template: card
   title: Противотаранное устройство
   caption: ''
