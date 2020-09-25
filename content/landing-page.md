@@ -27,7 +27,7 @@ cards:
   title: Лотки для кабельной продукции
   picture: "/static/dp-lk2.jpg"
   caption: ''
-  link_slug: ''
+  link_slug: cable-trays
 - template: card
   caption: ''
   link_slug: tech-support
