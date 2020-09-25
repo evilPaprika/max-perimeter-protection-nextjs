@@ -21,7 +21,7 @@ cards:
 - template: card
   caption: ''
   picture: "/static/img-20170226-wa0004-1.jpg"
-  link_slug: commissioning
+  link_slug: gates
   title: Ворота и калитки
 - template: card
   title: Лотки для кабельной продукции
