@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 import navigationContent from '../content/navigation.md';
@@ -36,7 +36,6 @@ export default function Navigation() {
                                     <NavDropdown
                                         key={label}
                                         title={label}
-                                        id="basic-nav-dropdown"
                                         show={show}
                                         onMouseEnter={showDropdown}
                                         onMouseLeave={hideDropdown}
@@ -88,6 +87,10 @@ export default function Navigation() {
                         .navbar__links .navbar-nav a {
                             white-space: normal;
                         }
+                    }
+                    
+                    .navbar__links .show > .nav-link {
+                        color: rgba(0, 0, 0, 0.7) !important;
                     }
                 `}
             </style>
