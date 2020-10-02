@@ -14,7 +14,7 @@ hero-carousel:
   caption: ''
 cards:
 - template: card
-  caption: Информация обновляется
+  caption: ''
   link_slug: mesh-panels
   picture: "/static/dks-lk3.JPG"
   title: Сетчатые сварные панели
