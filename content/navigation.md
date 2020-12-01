@@ -33,7 +33,7 @@ navlinks:
     slug: barbed-wire
     sub_links: []
   - template: navlink
-    label: Противоподкопные барьеры
+    label: Противоподкопное устройство
     slug: underground-barriers
     sub_links: []
   - template: navlink
