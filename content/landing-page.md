@@ -31,7 +31,7 @@ cards:
 - template: card
   caption: ''
   link_slug: video-systems
-  picture: "/static/photo_2021-01-27-20-57-29.jpeg"
+  picture: "/static/видео.jpg"
   title: Системы видеонаблюдения
 - template: card
   title: СКУД
