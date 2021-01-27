@@ -30,7 +30,7 @@ cards:
   link_slug: cable-trays
 - template: card
   caption: ''
-  link_slug: tech-support
+  link_slug: video-systems
   picture: "/static/видео.jpg"
   title: Системы видеонаблюдения
 - template: card
