@@ -24,7 +24,7 @@ sections:
 - type: document
   path: content/footer.md
   label: Подвал
-upload_dir: public/static
+upload_dir: public
 public_path: "/static"
 front_matter_path: ''
 use_front_matter_path: false
