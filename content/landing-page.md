@@ -12,6 +12,9 @@ hero-carousel:
 - template: hero-carousel
   picture: "/static/kust-rn2.jpeg"
   caption: ''
+- template: hero-carousel
+  picture: "/static/2022-08-24-11-50-21.png"
+  caption: ''
 cards:
 - template: card
   caption: ''
