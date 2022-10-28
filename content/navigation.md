@@ -41,7 +41,7 @@ navlinks:
     slug: expendable-materials
     sub_links: []
 - template: navlink
-  label: Системы безопасности
+  label: Продукция для промышленных объектов
   slug: ''
   sub_links:
   - template: navlink
