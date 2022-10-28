@@ -40,7 +40,7 @@ cards:
   title: Ворота противопожарные с калиткой
   picture: "/static/2022-10-28-16-52-35.png"
   caption: ''
-  link_slug: access-control
+  link_slug: fire-fighting gates
 - template: card
   title: Противотаранное устройство
   caption: ''
