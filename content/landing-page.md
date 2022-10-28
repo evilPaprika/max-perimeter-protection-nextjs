@@ -37,8 +37,8 @@ cards:
   picture: "/static/видео.jpg"
   title: Системы видеонаблюдения
 - template: card
-  title: СКУД
-  picture: "/static/turnstile574.jpg"
+  title: Ворота противопожарные с калиткой
+  picture: "/static/2022-10-28-16-52-35.png"
   caption: ''
   link_slug: access-control
 - template: card
