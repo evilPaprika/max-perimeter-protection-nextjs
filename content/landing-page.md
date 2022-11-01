@@ -38,7 +38,7 @@ cards:
   title: Системы видеонаблюдения
 - template: card
   title: 'Ворота противопожарные '
-  picture: "/static/2022-11-01-16-09-58.png"
+  picture: "/static/2022-11-01-16-10-24.png"
   caption: ''
   link_slug: access-control
 - template: card
