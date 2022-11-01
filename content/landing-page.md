@@ -37,8 +37,8 @@ cards:
   picture: "/static/видео.jpg"
   title: Системы видеонаблюдения
 - template: card
-  title: 'Ворота противопожарные '
-  picture: "/static/2022-11-01-16-10-24.png"
+  title: Ворота противопожарные распашные EI 60
+  picture: "/static/2022-11-01-16-34-34.png"
   caption: ''
   link_slug: access-control
 - template: card
