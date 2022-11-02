@@ -72,6 +72,10 @@ navlinks:
     label: Система отслеживания подвижных объектов
     slug: moving-object-system
     sub_links: []
+  - template: navlink
+    slug: fire-fighting gates
+    label: Ворота противопожарные распашные EI 60
+    sub_links: []
 - template: navlink
   label: Информация
   slug: information
