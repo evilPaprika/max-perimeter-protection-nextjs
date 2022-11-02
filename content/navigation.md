@@ -69,7 +69,7 @@ navlinks:
     slug: security-lighting-system
     sub_links: []
   - template: navlink
-    label: Система отслеживания подвижных объектов
+    label: Ворота противопожарные распашные EI 60
     slug: fire-fighting-gates
     sub_links: []
 - template: navlink
