@@ -12,11 +12,11 @@ pages:
 - content/templated-pages/contacts.md
 - content/templated-pages/expendable-materials.md
 - content/templated-pages/fence-posts.md
+- content/templated-pages/fire-fighting-gates.md
 - content/templated-pages/gates.md
 - content/templated-pages/information.md
 - content/templated-pages/mesh-panels.md
 - content/templated-pages/mounting.md
-- content/templated-pages/moving-object-system.md
 - content/templated-pages/notification-system.md
 - content/templated-pages/perimeter-fence-systems.md
 - content/templated-pages/planning.md
