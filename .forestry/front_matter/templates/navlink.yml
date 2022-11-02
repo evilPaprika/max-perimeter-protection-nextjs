@@ -21,3 +21,5 @@ fields:
     min: 
     max: 
   label: Суб-ссылки
+pages:
+- content/templated-pages/ВР П.md
