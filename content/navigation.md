@@ -49,6 +49,10 @@ navlinks:
     slug: video-systems
     sub_links: []
   - template: navlink
+    label: Ворота противопожарные распашные EI 60
+    slug: fire-fighting-gates
+    sub_links: []
+  - template: navlink
     label: Двери противопожарные EI 60
     slug: access-control
     sub_links: []
@@ -67,10 +71,6 @@ navlinks:
   - template: navlink
     label: Система охранного освещения
     slug: security-lighting-system
-    sub_links: []
-  - template: navlink
-    label: Ворота противопожарные распашные EI 60
-    slug: fire-fighting-gates
     sub_links: []
 - template: navlink
   label: Информация
