@@ -49,7 +49,7 @@ navlinks:
     slug: video-systems
     sub_links: []
   - template: navlink
-    label: Ворота противопожарные распашные EI 60
+    label: Двери противопожарные EI 60
     slug: access-control
     sub_links: []
   - template: navlink
