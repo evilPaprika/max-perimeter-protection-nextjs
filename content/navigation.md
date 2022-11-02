@@ -70,7 +70,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Система отслеживания подвижных объектов
-    slug: moving-object-system
+    slug: fire-fighting-gates
     sub_links: []
 - template: navlink
   label: Информация
