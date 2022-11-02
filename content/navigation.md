@@ -50,7 +50,7 @@ navlinks:
     sub_links: []
   - template: navlink
     label: Ворота противопожарные распашные EI 60
-    slug: access-control
+    slug: fire-fighting gates
     sub_links: []
   - template: navlink
     label: 'Противотаранное устройство '
