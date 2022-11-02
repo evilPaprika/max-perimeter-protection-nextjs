@@ -40,7 +40,7 @@ cards:
   title: 'Ворота противопожарные распашные EI 60 '
   picture: "/static/2022-11-01-18-24-22.png"
   caption: ''
-  link_slug: fire-fighting gates
+  link_slug: access-control
 - template: card
   title: Противотаранное устройство
   caption: ''
