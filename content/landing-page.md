@@ -44,7 +44,7 @@ cards:
 - template: card
   title: Двери противопожарные EI 60
   caption: ''
-  picture: "/static/60.png"
+  picture: "/static/двери.png"
   link_slug: access-control
 
 ---
