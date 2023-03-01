@@ -57,14 +57,6 @@ navlinks:
     slug: access-control
     sub_links: []
   - template: navlink
-    label: 'Противотаранное устройство '
-    slug: anti-ram-device
-    sub_links: []
-  - template: navlink
-    label: Охранная сигнализация
-    slug: security-system
-    sub_links: []
-  - template: navlink
     label: Фасонные элементы из оцинкованной стали
     slug: shaped-products
     sub_links:
@@ -72,6 +64,14 @@ navlinks:
       label: ''
       slug: ''
       sub_links: []
+  - template: navlink
+    label: 'Противотаранное устройство '
+    slug: anti-ram-device
+    sub_links: []
+  - template: navlink
+    label: Охранная сигнализация
+    slug: security-system
+    sub_links: []
   - template: navlink
     label: Система охранного освещения
     slug: security-lighting-system
