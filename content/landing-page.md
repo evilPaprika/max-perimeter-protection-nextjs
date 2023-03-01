@@ -42,10 +42,10 @@ cards:
   caption: ''
   link_slug: fire-fighting-gates
 - template: card
-  title: Противотаранное устройство
+  title: Двери противопожарные EI 60
   caption: ''
   picture: "/static/road-blocker-barrier.jpeg"
-  link_slug: anti-ram-device
+  link_slug: access-control
 
 ---
 **ООО «Максимальная Защита Периметра»** предлагает современные решения обеспечения безопасности объектов, выполняет услуги по проектированию, монтажу и последующему техническому обслуживанию. Комплексные решения для ключевых сегментов рынка.
