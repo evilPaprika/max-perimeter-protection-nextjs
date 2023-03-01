@@ -65,8 +65,8 @@ navlinks:
     slug: security-system
     sub_links: []
   - template: navlink
-    label: Система оповещения
-    slug: notification-system
+    label: Фасонные элементы из оцинкованной стали
+    slug: shaped-products
     sub_links: []
   - template: navlink
     label: Система охранного освещения
