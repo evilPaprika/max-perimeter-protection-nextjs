@@ -21,3 +21,5 @@ fields:
     min: 
     max: 
   label: Суб-ссылки
+pages:
+- content/templated-pages/Фасонные элементы из оцинкованной стали.md
